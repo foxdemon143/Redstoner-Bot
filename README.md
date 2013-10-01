@@ -5,7 +5,7 @@ A bot script for http://plug.dj/redstoner/
 
 /*
 
-Copyright © 2012-2013 by DJ NEON and Azad
+Copyright © 2012-2013 by DJ NEON and RedStoner
 
 Permission to use and/or distribute this software for any purpose without fee is hereby granted,
 provided that the above copyright notice and this permission notice appear in all copies.
