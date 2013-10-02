@@ -615,7 +615,7 @@ $('body').prepend('<script type="text/javascript" id="rules-js" src="http://past
 $('body').prepend('<script type="text/javascript" id="Whywoot-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/whywoot.js" />');
 $('body').prepend('<script type="text/javascript" id="Whymeh-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/Whymeh.js" />');
 $('body').prepend('<script type="text/javascript" id="Catfact-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/catfact.js" />');
-$('body').prepend('<script type="text/javascript" id="Owner-js" src="http://pastebin.com/gp3JsWGF" />');
+$('body').prepend('<script type="text/javascript" id="Owner-js" src="http://pastebin.com/raw.php?i=mA35Ew6M" />');
 $('body').prepend('<script type="text/javascript" id="Ping-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/ping.js" />');
 $('body').prepend('<script type="text/javascript" id="Hugme-js" src="http://pastebin.com/raw.php?i=X6h7YNWx" />');
 $('body').prepend('<script type="text/javascript" id="cheers-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/cheers.js" />');
