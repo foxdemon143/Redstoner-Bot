@@ -659,7 +659,7 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/autowoot.js" />');
 
 /* 
-*NOTE: STATSCOUNTER IS [ENABLED]
+* NOTE: STATSCOUNTER IS [ENABLED]
 * DO NOT CHANGE THIS SECTION BELOW, FAILURE FROM CHANGES WELL DEFINITELY GET ME MAD!
 */
 
