@@ -13,9 +13,6 @@
  *
  * @author 	Tawi - DJ Neon (Member. on Plug.dj)
  */
-/*
- * Whether the user has currently enabled auto-woot.
- */
 
 
 function delay() {
