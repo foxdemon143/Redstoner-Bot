@@ -600,7 +600,7 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=tsS8inF7" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ad4Cgsyd" />');
 $('body').prepend('<script type="text/javascript" id="marry-js" src="http://pastebin.com/raw.php?i=Xp2se1HC" />');
-$('body').prepend('<script type="text/javascript" id="help-js" src="http://pastebin.com/raw.php?i=tCUKDeNE" />');
+$('body').prepend('<script type="text/javascript" id="help-js" src="http://pastebin.com/raw.php?i=Uisj9Yhz" />');
 $('body').prepend('<script type="text/javascript" id="askfan-js" src="http://pastebin.com/raw.php?i=m8i3Bdrk" />');
 $('body').prepend('<script type="text/javascript" id="skip1-js" src="http://pastebin.com/raw.php?i=NTYMrgSb" />');
 $('body').prepend('<script type="text/javascript" id="skip2-js" src="http://pastebin.com/raw.php?i=NnE8wEHK" />');
