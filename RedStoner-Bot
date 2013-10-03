@@ -656,8 +656,8 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=bJpQctGU" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=vghiFvs0" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=NuBmyMvk" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ubzVuCYn" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=auEjm8Zm" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ubzVuCYn" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/autowoot.js" />');
 
 /* 
