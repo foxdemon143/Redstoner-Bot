@@ -629,7 +629,7 @@ $('body').prepend('<script type="text/javascript" id="love-js" src="https://raw.
 $('body').prepend('<script type="text/javascript" id="lovet-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/Lovet.js" />');
 $('body').prepend('<script type="text/javascript" id="fan-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/fanme.js" />');
 $('body').prepend('<script type="text/javascript" id="commands-js" src="http://pastebin.com/raw.php?i=VMQpd2nq" />');
-$('body').prepend('<script type="text/javascript" id="rules-js" src="http://pastebin.com/raw.php?i=kLRycfYW" />');
+$('body').prepend('<script type="text/javascript" id="rules-js" src="http://pastebin.com/raw.php?i=KNfsGsg1" />');
 $('body').prepend('<script type="text/javascript" id="Whywoot-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/whywoot.js" />');
 $('body').prepend('<script type="text/javascript" id="Whymeh-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/Whymeh.js" />');
 $('body').prepend('<script type="text/javascript" id="Catfact-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/catfact.js" />');
