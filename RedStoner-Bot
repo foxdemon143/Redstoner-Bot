@@ -202,6 +202,7 @@ var scripts = [
  
 function initAPIListeners() {
         API.on(API.DJ_ADVANCE, djAdvanced);
+        API.on(API.VOTE_UPDATE, callback);
         API.on(API.CHAT, autoRespond);
         API.on(API.DJ_UPDATE, queueUpdate);
         API.on(API.VOTE_UPDATE, function (obj) {
