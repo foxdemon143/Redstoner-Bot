@@ -600,22 +600,6 @@ function checkPredict() {
 }
 
 delay();
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=UV4Uvf8v" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=MzJf6E0k" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=mzEuuNTV" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=S3yceVcS" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=eNDTVCbs" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=M4n2D6Sh" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ES1fhbGV" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=eKHNmZgk" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=aeZfcVVX" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=bJpQctGU" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=vghiFvs0" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=NuBmyMvk" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=auEjm8Zm" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ubzVuCYn" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=iAfgNG6C" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=JKuwEgKK" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/tybot" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/ty1" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/igtg" />');
@@ -669,6 +653,22 @@ $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.gith
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/dontgo.js" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/imoff.js" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/autowoot.js" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=UV4Uvf8v" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=MzJf6E0k" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=mzEuuNTV" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=S3yceVcS" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=eNDTVCbs" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=M4n2D6Sh" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ES1fhbGV" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=eKHNmZgk" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=aeZfcVVX" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=bJpQctGU" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=vghiFvs0" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=NuBmyMvk" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=auEjm8Zm" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ubzVuCYn" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=iAfgNG6C" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=JKuwEgKK" />');
 
 /* 
 * NOTE: STATSCOUNTER IS [ENABLED]
