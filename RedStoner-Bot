@@ -600,6 +600,8 @@ function checkPredict() {
 }
 
 delay();
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=M4n2D6Sh" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=vvNseKfS" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=eKHNmZgk" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=aeZfcVVX" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=bJpQctGU" />');
