@@ -607,12 +607,7 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=auEjm8Zm" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ubzVuCYn" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=iAfgNG6C" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ghZetqwu" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=qyifQWBX" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=A1UjSmAG" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=d4v9LtD5" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ndTDPAZp" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=2JypvHjE" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=JKuwEgKK" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/tybot" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/ty1" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/igtg" />');
