@@ -604,15 +604,7 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=mCvDYu4s" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=tsPZ30JY" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ccekTjvR" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ahP1cm7U" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=HRtMsVSR" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=PMDwUG8W" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=tsS8inF7" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ad4Cgsyd" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=uQLscC1z" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=dnh4pgMc" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=RKbWpatH" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=36dMyU6V" />');
 $('body').prepend('<script type="text/javascript" id="marry-js" src="http://pastebin.com/raw.php?i=j0MEavCk" />');
 $('body').prepend('<script type="text/javascript" id="help-js" src="http://pastebin.com/raw.php?i=Uisj9Yhz" />');
 $('body').prepend('<script type="text/javascript" id="askfan-js" src="http://pastebin.com/raw.php?i=m8i3Bdrk" />');
