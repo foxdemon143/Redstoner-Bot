@@ -605,9 +605,6 @@ $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.gith
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/igtg" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/imback.js" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/imbk.js" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/Fant" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/FanForFan" />');
-$('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/fan4fan" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/how" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/howt" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ahP1cm7U" />');
