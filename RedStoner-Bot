@@ -620,10 +620,6 @@ $('body').prepend('<script type="text/javascript" id="marry-js" src="http://past
 $('body').prepend('<script type="text/javascript" id="help-js" src="http://pastebin.com/raw.php?i=Uisj9Yhz" />');
 $('body').prepend('<script type="text/javascript" id="askfan-js" src="http://pastebin.com/raw.php?i=m8i3Bdrk" />');
 $('body').prepend('<script type="text/javascript" id="skip1-js" src="http://pastebin.com/raw.php?i=NTYMrgSb" />');
-$('body').prepend('<script type="text/javascript" id="skip2-js" src="http://pastebin.com/raw.php?i=NnE8wEHK" />');
-$('body').prepend('<script type="text/javascript" id="skip3-js" src="http://pastebin.com/raw.php?i=hgywp17r" />');
-$('body').prepend('<script type="text/javascript" id="skip4-js" src="http://pastebin.com/raw.php?i=tHejBgzP" />');
-$('body').prepend('<script type="text/javascript" id="skip5-js" src="http://pastebin.com/raw.php?i=CFV3XZYu" />');
 $('body').prepend('<script type="text/javascript" id="love-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/Love.js" />');
 $('body').prepend('<script type="text/javascript" id="lovet-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/Lovet.js" />');
 $('body').prepend('<script type="text/javascript" id="commands-js" src="http://pastebin.com/raw.php?i=KTU82nQK" />');
