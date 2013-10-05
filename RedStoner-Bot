@@ -670,6 +670,8 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=ubzVuCYn" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=iAfgNG6C" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=JKuwEgKK" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/backus/Plug.DJ-Javascript-Chatbot/master/src/commands/cookie.coffee" />');
+
 
 /* 
 * NOTE: STATSCOUNTER IS [ENABLED]
