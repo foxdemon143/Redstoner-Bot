@@ -671,6 +671,8 @@ $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=iAfgNG6C" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=JKuwEgKK" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=88z7LdL5" />');
+$('body').prepend('<script type="text/javascript" id="twitter-js" src="http://pastebin.com/raw.php?i=LRnB6dpJ" />');
+$('body').prepend('<script type="text/javascript" id="link-js" src="http://pastebin.com/raw.php?i=EFBEXQrX" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/commands/YL.js" />');
 
 
