@@ -602,8 +602,8 @@ function checkPredict() {
 delay();
 $('body').prepend('<script type="text/javascript" id="Hey-js" src="http://pastebin.com/raw.php?i=W44ypeHv" />');
 $('body').prepend('<script type="text/javascript" id="YW-js" src="http://pastebin.com/raw.php?i=FdgeJQYC" />');
-$('body').prepend('<script type="text/javascript" id="Bye-js" src="http://pastebin.com/raw.php?i=mCvDYu4s" />');
-$('body').prepend('<script type="text/javascript" id="Back-js" src="http://pastebin.com/raw.php?i=tsPZ30JY" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=mCvDYu4s" />');
+$('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=tsPZ30JY" />');
 $('body').prepend('<script type="text/javascript" id="hru-js" src="http://pastebin.com/raw.php?i=ccekTjvR" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="http://pastebin.com/raw.php?i=HRtMsVSR" />');
 $('body').prepend('<script type="text/javascript" id="marry-js" src="http://pastebin.com/raw.php?i=j0MEavCk" />');
