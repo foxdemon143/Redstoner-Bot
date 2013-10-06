@@ -625,7 +625,7 @@ $('body').prepend('<script type="text/javascript" id="flipcoin-js" src="https://
 $('body').prepend('<script type="text/javascript" id="8ball-js" src="http://pastebin.com/raw.php?i=SC0uYENr" />');
 $('body').prepend('<script type="text/javascript" id="Modlist-js" src="http://pastebin.com/raw.php?i=BNELyR3F" />');
 $('body').prepend('<script type="text/javascript" id="update-js" src="http://pastebin.com/raw.php?i=S5XjeFYM" />');
-$('body').prepend('<script type="text/javascript" id="test-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/commands/test.js" />');
+$('body').prepend('<script type="text/javascript" id="test-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/test.js" />');
 $('body').prepend('<script type="text/javascript" id="up-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/stepup.js" />');
 $('body').prepend('<script type="text/javascript" id="down-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/stepdown.js" />');
 $('body').prepend('<script type="text/javascript" id="upreply-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/upreply.js" />');
