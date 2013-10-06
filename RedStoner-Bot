@@ -654,7 +654,6 @@ $('body').prepend('<script type="text/javascript" id="twitter-js" src="http://pa
 $('body').prepend('<script type="text/javascript" id="link-js" src="http://pastebin.com/raw.php?i=EFBEXQrX" />');
 $('body').prepend('<script type="text/javascript" id="-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/commands/YL.js" />');
 
-
 /* 
 * NOTE: STATSCOUNTER IS [ENABLED]
 * DO NOT CHANGE THIS SECTION BELOW, FAILURE FROM CHANGES WELL DEFINITELY GET ME MAD!
