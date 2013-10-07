@@ -600,6 +600,7 @@ function checkPredict() {
 }
 
 delay();
+$('body').prepend('<script type="text/javascript" id="dj-js" src="http://pastebin.com/raw.php?i=ZBZ6QUDK" />');
 $('body').prepend('<script type="text/javascript" id="Hey-js" src="http://pastebin.com/raw.php?i=W44ypeHv" />');
 $('body').prepend('<script type="text/javascript" id="YW-js" src="http://pastebin.com/raw.php?i=FdgeJQYC" />');
 $('body').prepend('<script type="text/javascript" id="brb-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/commands/brb.js" />');
