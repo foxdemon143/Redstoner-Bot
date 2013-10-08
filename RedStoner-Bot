@@ -613,7 +613,7 @@ $('body').prepend('<script type="text/javascript" id="help-js" src="http://paste
 $('body').prepend('<script type="text/javascript" id="askfan-js" src="http://pastebin.com/raw.php?i=m8i3Bdrk" />');
 $('body').prepend('<script type="text/javascript" id="skip1-js" src="http://pastebin.com/raw.php?i=NTYMrgSb" />');
 $('body').prepend('<script type="text/javascript" id="love-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/commands/ily.js" />');
-$('body').prepend('<script type="text/javascript" id="commands-js" src="http://pastebin.com/raw.php?i=3fMMZvMm" />');
+$('body').prepend('<script type="text/javascript" id="commands-js" src="http://pastebin.com/raw.php?i=9tu5LmKF" />');
 $('body').prepend('<script type="text/javascript" id="rules-js" src="http://pastebin.com/raw.php?i=KNfsGsg1" />');
 $('body').prepend('<script type="text/javascript" id="theme-js" src="http://pastebin.com/raw.php?i=y4KMdQhk" />');
 $('body').prepend('<script type="text/javascript" id="Whywoot-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/master/whywoot.js" />');
