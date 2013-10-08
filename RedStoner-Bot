@@ -601,7 +601,7 @@ function checkPredict() {
 
 delay();
 $('body').prepend('<script type="text/javascript" id="H8-js" src="http://pastebin.com/raw.php?i=qqmgznSU" />');
-$('body').prepend('<script type="text/javascript" id="cheat-js" src="http://pastebin.com/raw.php?i=cGd4UTYH" />');
+$('body').prepend('<script type="text/javascript" id="cheat-js" src="https://github.com/TawiBoii05/ShuuZone-bot/edit/commands/cheating.js" />');
 $('body').prepend('<script type="text/javascript" id="Hey-js" src="http://pastebin.com/raw.php?i=W44ypeHv" />');
 $('body').prepend('<script type="text/javascript" id="YW-js" src="http://pastebin.com/raw.php?i=FdgeJQYC" />');
 $('body').prepend('<script type="text/javascript" id="brb-js" src="https://raw.github.com/TawiBoii05/ShuuZone-bot/commands/brb.js" />');
