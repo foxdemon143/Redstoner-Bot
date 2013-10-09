@@ -57,8 +57,8 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Emub                      DerpTheBass                 [#808]                          eBot
-mubBot.admins = ["50aeaf683e083e18fa2d187e", "50aeb07e96fba52c3ca04ca8", "50aeb607c3b97a2cb4c35ac1", "51264d96d6e4a966883b0702"];
+//Emub                      DerpTheBass
+mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
 mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass"];
 
@@ -1017,7 +1017,7 @@ botMethods.djAdvanceEvent = function(data){
     console.log("Running mubBot User Shell version " + mubBot.misc.version);
 
     setTimeout(function(){
-        $.getScript('http://connect.soundcloud.com/sdk.js');
+        $.getScript('');
     }, 1000);
 
     setTimeout(function(){
