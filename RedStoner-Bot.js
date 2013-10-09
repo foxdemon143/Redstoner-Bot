@@ -31,7 +31,7 @@ toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
 mubBot.misc.version = "2.0.27";
-mubBot.misc.origin = "This bot was created by Redstoners and DJ-Neon alone, and it is copyrighted!";
+mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
 mubBot.misc.lockSkipping = false;
@@ -60,7 +60,7 @@ mubBot.settings.removedFilter = true;
 //Redstoner                      DJ-NEON
 mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
-mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass"];
+mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass","pussy","dick"];
 
 mubBot.filters.racistWords = ["nigger","kike","spick","porchmonkey","camel jockey","towelhead","towel head","chink","gook","porch monkey"];
 
@@ -215,9 +215,9 @@ botMethods.djAdvanceEvent = function(data){
                         if(typeof command[1] == "undefined"){
                             API.sendChat("You can keep ");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" You can play anthing long as its not crappy or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
+                            API.sendChat(command[1]+" You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }else{
-                            API.sendChat("You can play anthing long as its not crappy or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
+                            API.sendChat("You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -266,11 +266,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "steam":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("http://steamcommunity.com/groups/plugfim#");
+                            API.sendChat("");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://steamcommunity.com/groups/plugfim#");
+                            API.sendChat(command[1]+" ");
                         }else{
-                            API.sendChat("http://steamcommunity.com/groups/plugfim#");
+                            API.sendChat("");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -708,7 +708,7 @@ botMethods.djAdvanceEvent = function(data){
                                     API.sendChat("/me drowns @"+crowd[randomUser].username+" in batter");
                                     break;
                                 case 2:
-                                    API.sendChat("/me shows @"+crowd[randomUser].username+" the power of friendship. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me shows @"+crowd[randomUser].username+" the power of REDSTONE. BY SLAPPING THEM WITH A COOKIE");
                                     break;
                                 case 3:
                                     API.sendChat("/me hands an anthrax laced cookie to @"+crowd[randomUser].username);
@@ -728,7 +728,7 @@ botMethods.djAdvanceEvent = function(data){
                                     API.sendChat("/me hands an anthrax laced cookie to @"+botMethods.cleanString(command[1]));
                                     break;
                                 case 3:
-                                    API.sendChat("/me shows @"+botMethods.cleanString(command[1])+" the power of friendship. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me shows @"+botMethods.cleanString(command[1])+" the power of redstone. BY SLAPPING THEM WITH A COOKIE");
                                     break;
                             }
                         }
