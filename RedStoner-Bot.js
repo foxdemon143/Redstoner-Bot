@@ -46,7 +46,7 @@ mubBot.filters.swearWords = new Array();
 mubBot.filters.racistWords = new Array();
 mubBot.filters.beggerWords = new Array();
 
-mubBot.settings.maxLength = 10; //minutes
+mubBot.settings.maxLength = 5; //minutes
 mubBot.settings.cooldown = 10; //seconds
 mubBot.settings.staffMeansAccess = true;
 mubBot.settings.historyFilter = true;
@@ -213,7 +213,7 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "theme":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
+                            API.sendChat("You can keep ");
                         }else if(command[1].indexOf("@") > -1){
                             API.sendChat(command[1]+" In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
                         }else{
@@ -227,11 +227,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "commands":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Bot Commands - http://playmc.pw/plug/commands.html");
+                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Bot Commands - http://playmc.pw/plug/commands.html");
+                            API.sendChat(command[1]+" Bot Commands - http://goo.gl/zkGJbe");
                         }else{
-                            API.sendChat("Bot Commands - http://playmc.pw/plug/commands.html");
+                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -280,11 +280,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "skype":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("http://goo.gl/NjSO6j");
+                            API.sendChat("");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://goo.gl/NjSO6j");
+                            API.sendChat(command[1]+"");
                         }else{
-                            API.sendChat("http://goo.gl/NjSO6j");
+                            API.sendChat("");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -321,8 +321,8 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "mubplug":
-                        API.sendChat("http://pastebin.com/GwwFEAhX");
+                    case "!source":
+                        API.sendChat("https://github.com/TawiBoii05/Redstoner-Bot");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
