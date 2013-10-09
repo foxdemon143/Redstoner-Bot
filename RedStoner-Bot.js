@@ -1014,7 +1014,7 @@ botMethods.djAdvanceEvent = function(data){
 
 
     botMethods.loadStorage();
-    console.log("Running mubBot User Shell version " + mubBot.misc.version);
+    console.log("Running RedstonerBot Bot version " + mubBot.misc.version);
 
     setTimeout(function(){
         $.getScript('');
