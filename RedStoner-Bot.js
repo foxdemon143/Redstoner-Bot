@@ -57,7 +57,7 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Emub                      DerpTheBass
+//Redstoner                      DJ-NEON
 mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
 mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass"];
@@ -199,11 +199,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "rules":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Room Rules - http://goo.gl/GBl4e");
+                            API.sendChat("Room Rules - http://goo.gl/VzL1h7");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Room Rules - http://goo.gl/GBl4e");
+                            API.sendChat(command[1]+" Room Rules - http://goo.gl/VzL1h7");
                         }else{
-                            API.sendChat("Room Rules - http://goo.gl/GBl4e");
+                            API.sendChat("Room Rules - http://goo.gl/VzL1h7");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -215,9 +215,9 @@ botMethods.djAdvanceEvent = function(data){
                         if(typeof command[1] == "undefined"){
                             API.sendChat("You can keep ");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
+                            API.sendChat(command[1]+" You can play anthing long as its not crappy or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }else{
-                            API.sendChat("In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
+                            API.sendChat("You can play anthing long as its not crappy or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -321,7 +321,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "!source":
+                    case "source":
                         API.sendChat("https://github.com/TawiBoii05/Redstoner-Bot");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -465,7 +465,7 @@ botMethods.djAdvanceEvent = function(data){
                         break;
 
                     case "version":
-                        API.sendChat("mubBot user shell version " + mubBot.misc.version);
+                        API.sendChat("RedstonerBot  version " + mubBot.misc.version);
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
