@@ -57,8 +57,8 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Redstoner              [DJ-NEON]                  [Redstoner-bot]                 [DJ-Alex]
-mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e", "52162c1c3b79031fbd4b0e9c"];
+//Redstoner              [DJ-NEON]                  [Redstoner-bot]
+mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
 mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass","pussy","dick"];
 
@@ -196,20 +196,7 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                    case "userlist":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("User List - http://goo.gl/VzL1h7");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Room Rules - http://goo.gl/VzL1h7");
-                        }else{
-                            API.sendChat("User List - http://goo.gl/VzL1h7");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-                        
+
                     case "rules":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("Room Rules - http://goo.gl/VzL1h7");
@@ -228,9 +215,9 @@ botMethods.djAdvanceEvent = function(data){
                         if(typeof command[1] == "undefined"){
                             API.sendChat("You can keep ");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" You can play anything long as it does not contain p*rns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
+                            API.sendChat(command[1]+" You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }else{
-                            API.sendChat("You can play anything long as it does not contain p*rns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
+                            API.sendChat("You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -279,11 +266,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "link":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Wesbite : http://redstoner.com/");
+                            API.sendChat("http://redstoner.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Website : http://redstoner.com/");
+                            API.sendChat(command[1]+" http://redstoner.com/");
                         }else{
-                            API.sendChat("Website : http://redstoner.com/");
+                            API.sendChat("http://redstoner.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -489,7 +476,6 @@ botMethods.djAdvanceEvent = function(data){
                     case "author":
                     case "authors":
                     case "creator":
-                    case "owners":
                         API.sendChat(mubBot.misc.origin);
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -709,35 +695,23 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                    case "reward":
+                    case "cookie":
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A chocolate chip cookie");
+                                    API.sendChat("/me throws a STICK OF DYNAMITE at @"+crowd[randomUser].username);
                                     break;
                                 case 1:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username+" in batter");
+                                    API.sendChat("/me drowns @"+crowd[randomUser].username+" in batter");
                                     break;
                                 case 2:
-                                    API.sendChat("Shows @"+crowd[randomUser].username+" the power of REDSTONE. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me shows @"+crowd[randomUser].username+" the power of REDSTONE. BY SLAPPING THEM WITH A COOKIE");
                                     break;
                                 case 3:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A chocolate chip cookie");
-                                    break;
-                                case 4:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With An animal cracker");
-                                    break;
-                                case 5:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A special brownie");
-                                    break;
-                                case 6:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A scooby snack");
-                                    break;
-                                case 7:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A cupcake");
+                                    API.sendChat("/me hands an anthrax laced cookie to @"+crowd[randomUser].username);
                                     break;
                             }
                         }else{
@@ -745,28 +719,16 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A chocolate chip cookie");
+                                    API.sendChat("/me throws a STICK OF DYNAMITE at @"+botMethods.cleanString(command[1]));
                                     break;
                                 case 1:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username+" in batter");
+                                    API.sendChat("/me drowns @"+botMethods.cleanString(command[1])+" in batter");
                                     break;
                                 case 2:
-                                    API.sendChat("Shows @"+crowd[randomUser].username+" the power of REDSTONE. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me hands an anthrax laced cookie to @"+botMethods.cleanString(command[1]));
                                     break;
                                 case 3:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A chocolate chip cookie");
-                                    break;
-                                case 4:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With An animal cracker");
-                                    break;
-                                case 5:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A special brownie");
-                                    break;
-                                case 6:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A scooby snack");
-                                    break;
-                                case 7:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A cupcake");
+                                    API.sendChat("/me shows @"+botMethods.cleanString(command[1])+" the power of redstone. BY SLAPPING THEM WITH A COOKIE");
                                     break;
                             }
                         }
@@ -797,13 +759,13 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[1]){
                     case '1':
-                        API.sendChat('Only English songs can be played in this room');
+                        API.sendChat('Only Brony/My Little Pony related music and PMV’s can be played in this room');
                         break;
                     case '2':
-                        API.sendChat('All non-English are subject to being skipped if they are just pictures or simple loops');
+                        API.sendChat('All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
                         break;
                     case '3':
-                        API.sendChat('None-English with little no effort are subject to being skipped');
+                        API.sendChat('Mashups/mixes/loops with little to no effort are subject to being skipped');
                         break;
                     case '4':
                         API.sendChat('Any song played that is currently in the history will be skipped');
@@ -812,7 +774,7 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
                         break;
                     case '6':
-                        API.sendChat('No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
+                        API.sendChat('No songs over 10 minutes. (some songs a little bit over may be allowed, ask a mod)');
                         break;
                     case '7':
                         API.sendChat('Spamming in chat will result in kicked');
@@ -981,21 +943,21 @@ botMethods.djAdvanceEvent = function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID, fromID = data.fromID;
         if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
             if(msg.indexOf(':eyeroll:') > -1){
-                API.sendChat(' ¬_¬');
+                API.sendChat('/me ¬_¬');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':notamused:') > -1){
-                API.sendChat(' ಠ_ಠ');
+                API.sendChat('/me ಠ_ಠ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':yuno:') > -1){
-                API.sendChat(' ლ(ಥ益ಥლ');
+                API.sendChat('/me ლ(ಥ益ಥლ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -1010,23 +972,23 @@ botMethods.djAdvanceEvent = function(data){
         if(mubBot.settings.ruleSkip && typeof ruleSkip[data.media.id] != "undefined"){
             switch(ruleSkip[data.media.id].rule){
                 case '1':
-                    API.sendChat('@'+data.dj.username+' Five minute songs only! Ask Redstoner\' staff members for 5 min songs or longer!);
+                    API.sendChat('@'+data.dj.username+' Only Brony/My Little Pony related music and PMV’s can be played in this room');
                     botMethods.skip();
                     break;
                 case '2':
-                    API.sendChat('@'+data.dj.username+' Songs that are not in English are being skippped');
+                    API.sendChat('@'+data.dj.username+' All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
                     botMethods.skip();
                     break;
                 case '3':
-                    API.sendChat('@'+data.dj.username+' No ugly musics!');
+                    API.sendChat('@'+data.dj.username+' Mashups/mixes/loops with little to no effort are subject to being skipped');
                     botMethods.skip();
                     break;
                 case '13':
-                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Twitter group, you can post it there with proper tags.)');
+                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags [NSFW/NSFL])');
                     botMethods.skip();
                     break;
                 case '14':
-                    API.sendChat('@'+data.dj.username+' No playing Live Musics unless you’re the (co)host or were giving permission to play a Live Video by a (co)host');
+                    API.sendChat('@'+data.dj.username+' No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
                     botMethods.skip();
                     break;
                 case '99':
