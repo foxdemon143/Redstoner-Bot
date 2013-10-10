@@ -292,13 +292,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "skype":
+                    case "twitter":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("");
+                            API.sendChat("Twitter - https://twitter.com/RedstonerServer");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+"");
+                            API.sendChat(command[1]+" Twitter - https://twitter.com/RedstonerServer");
                         }else{
-                            API.sendChat("");
+                            API.sendChat("Twitter - https://twitter.com/RedstonerServer");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
