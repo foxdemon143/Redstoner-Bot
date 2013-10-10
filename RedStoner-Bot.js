@@ -30,7 +30,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.29";
+mubBot.misc.version = "2.0.32";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
@@ -174,7 +174,7 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1){
                 switch(command[0].toLowerCase()){
                     case "ping":
-                        API.sendChat("@"+data.from+ "PONG!");
+                        API.sendChat("@"+data.from+ " PONG!");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -239,6 +239,20 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
+                    case "user":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("User List - http://goo.gl/oQ9dFN");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" User List - http://goo.gl/oQ9dFN");
+                        }else{
+                            API.sendChat("User List - http://goo.gl/oQ9dFN");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
+                        
                     case "wiki":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("@"+data.from+" https://en.wikipedia.org/wiki/Special:Random");
@@ -266,11 +280,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "link":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("http://redstoner.com/");
+                            API.sendChat("Our Web - http://redstoner.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://redstoner.com/");
+                            API.sendChat(command[1]+" Our Web - http://redstoner.com/");
                         }else{
-                            API.sendChat("http://redstoner.com/");
+                            API.sendChat("Our Web - http://redstoner.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -654,7 +668,7 @@ botMethods.djAdvanceEvent = function(data){
                                 case 0:
                                     API.sendChat("Hugs? Forget that!");
                                     setTimeout(function(){
-                                        API.sendChat("/me grabs @"+crowd[randomUser].username+" 's ass");
+                                        API.sendChat("/me grabs @"+crowd[randomUser].username+"'s ass");
                                     }, 650);
                                     break;
                                 case 1:
@@ -695,7 +709,7 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                    case "cookie":
+                    case "reward":
                         if(typeof command[1] == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
@@ -759,10 +773,10 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[1]){
                     case '1':
-                        API.sendChat('Only Brony/My Little Pony related music and PMV’s can be played in this room');
+                        API.sendChat('Only English songs and dubstep, can be played in this room');
                         break;
                     case '2':
-                        API.sendChat('All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
+                        API.sendChat('All non-English Musics are subject to being skipped if they are just pictures or simple loops');
                         break;
                     case '3':
                         API.sendChat('Mashups/mixes/loops with little to no effort are subject to being skipped');
@@ -774,7 +788,7 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
                         break;
                     case '6':
-                        API.sendChat('No songs over 10 minutes. (some songs a little bit over may be allowed, ask a mod)');
+                        API.sendChat('No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
                         break;
                     case '7':
                         API.sendChat('Spamming in chat will result in kicked');
@@ -795,7 +809,7 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat('Respect other users and moderators, continuous disrespect will result in being kicked');
                         break;
                     case '13':
-                        API.sendChat('No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags [NSFW/NSFL])');
+                        API.sendChat('No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags.)');
                         break;
                     case '14':
                         API.sendChat('No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
