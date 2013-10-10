@@ -30,7 +30,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.27";
+mubBot.misc.version = "2.0.29";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
@@ -57,7 +57,7 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Redstoner                      DJ-NEON
+//Redstoner              [DJ-NEON]                  [Redstoner-bot]
 mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
 mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass","pussy","dick"];
@@ -264,13 +264,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "steam":
+                    case "link":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("");
+                            API.sendChat("http://redstoner.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" ");
+                            API.sendChat(command[1]+" http://redstoner.com/");
                         }else{
-                            API.sendChat("");
+                            API.sendChat("http://redstoner.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
