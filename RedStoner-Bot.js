@@ -292,13 +292,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "twitter":
+                    case "skype":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Twiiter - https://twitter.com/RedstonerServer");
+                            API.sendChat("");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Twitter - https://twitter.com/RedstonerServer");
+                            API.sendChat(command[1]+"");
                         }else{
-                            API.sendChat("Twitter - https://twitter.com/RedstonerServer");
+                            API.sendChat("");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -716,16 +716,16 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A chocolate chip cookie");
+                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" With a cupcake");
                                     break;
                                 case 1:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username+" With An animal cracker");
+                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" with a brownie");
                                     break;
                                 case 2:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username+" With A special brownie");
+                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" with a beer");
                                     break;
                                 case 3:
-                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A scooby snack");
+                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" with a cookie");
                                     break;
                             }
                         }else{
@@ -733,16 +733,16 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me throws a STICK OF DYNAMITE at @"+botMethods.cleanString(command[1]));
+                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" With a cupcake");
                                     break;
                                 case 1:
-                                    API.sendChat("/me drowns @"+botMethods.cleanString(command[1])+" in batter");
+                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" with a brownie");
                                     break;
                                 case 2:
-                                    API.sendChat("/me hands an anthrax laced cookie to @"+botMethods.cleanString(command[1]));
+                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" with a beer");
                                     break;
                                 case 3:
-                                    API.sendChat("/me shows @"+botMethods.cleanString(command[1])+" the power of redstone. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" with a cookie");
                                     break;
                             }
                         }
@@ -1040,4 +1040,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me Running RedstonerBot '+mubBot.misc.version)
+    API.sendChat('/me Started Running RedstonerBot '+mubBot.misc.version)
