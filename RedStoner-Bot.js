@@ -292,13 +292,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "skype":
+                    case "twitter":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("");
+                            API.sendChat("Twiiter - https://twitter.com/RedstonerServer");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+"");
+                            API.sendChat(command[1]+" Twitter - https://twitter.com/RedstonerServer");
                         }else{
-                            API.sendChat("");
+                            API.sendChat("Twitter https://twitter.com/RedstonerServer");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -716,16 +716,16 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me throws a STICK OF DYNAMITE at @"+crowd[randomUser].username);
+                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A chocolate chip cookie");
                                     break;
                                 case 1:
-                                    API.sendChat("/me drowns @"+crowd[randomUser].username+" in batter");
+                                    API.sendChat("Rewards @"+crowd[randomUser].username+" With An animal cracker");
                                     break;
                                 case 2:
-                                    API.sendChat("/me shows @"+crowd[randomUser].username+" the power of REDSTONE. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("Rewards @"+crowd[randomUser].username+" With A special brownie");
                                     break;
                                 case 3:
-                                    API.sendChat("/me hands an anthrax laced cookie to @"+crowd[randomUser].username);
+                                    API.sendChat("Rewards @"+crowd[randomUser].username" With A scooby snack");
                                     break;
                             }
                         }else{
