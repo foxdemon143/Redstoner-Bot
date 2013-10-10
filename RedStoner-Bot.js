@@ -298,7 +298,7 @@ botMethods.djAdvanceEvent = function(data){
                         }else if(command[1].indexOf("@") > -1){
                             API.sendChat(command[1]+" Twitter - https://twitter.com/RedstonerServer");
                         }else{
-                            API.sendChat("Twitter https://twitter.com/RedstonerServer");
+                            API.sendChat("Twitter - https://twitter.com/RedstonerServer");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
