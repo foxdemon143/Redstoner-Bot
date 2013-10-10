@@ -173,8 +173,8 @@ botMethods.djAdvanceEvent = function(data){
             }
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1){
                 switch(command[0].toLowerCase()){
-                    case "marco":
-                        API.sendChat("Polo");
+                    case "ping":
+                        API.sendChat("@"+data.from+ "PONG!");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
