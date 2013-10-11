@@ -12,7 +12,7 @@
  * NOTE:  PLEASE CONTACT DJ-NEON FOR THIS SCRIPT (DO NOT CHANGE ANYTHING ON THIS SCRIPT OR USE THIS SCRIPT WHICH WAS WRITTEN BY 
  * IT'S RIGHTFUL OWNER: DJ NOEN)
  *
- * @author 	Tawi - DJ Neon (Member. on Plug.dj)
+ * @Author 	Tawi - DJ Neon (Member. on Plug.dj)
  */
 
 
@@ -716,16 +716,16 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" With a cupcake");
+                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a cupcake");
                                     break;
                                 case 1:
-                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" with a brownie");
+                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a brownie");
                                     break;
                                 case 2:
-                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" with a beer");
+                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a beer");
                                     break;
                                 case 3:
-                                    API.sendChat("/me Rewards @"+crowd[randomUser].username+" with a cookie");
+                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a cookie");
                                     break;
                             }
                         }else{
@@ -957,21 +957,21 @@ botMethods.djAdvanceEvent = function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID, fromID = data.fromID;
         if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
             if(msg.indexOf(':eyeroll:') > -1){
-                API.sendChat('/me ¬_¬');
+                API.sendChat('/me : ¬_¬');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':notamused:') > -1){
-                API.sendChat('/me ಠ_ಠ');
+                API.sendChat('/me : ಠ_ಠ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':yuno:') > -1){
-                API.sendChat('/me ლ(ಥ益ಥლ');
+                API.sendChat('/me : ლ(ಥ益ಥლ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
