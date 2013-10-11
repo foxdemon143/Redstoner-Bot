@@ -1028,7 +1028,7 @@ botMethods.djAdvanceEvent = function(data){
 
 
     botMethods.loadStorage();
-    console.log("Running RedstonerBot Bot version " + mubBot.misc.version);
+    console.log("Now Running RedstonerBot Bot version " + mubBot.misc.version);
 
     setTimeout(function(){
         $.getScript('');
@@ -1040,4 +1040,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me Started Running RedstonerBot '+mubBot.misc.version)
+    API.sendChat('/me : Now Running RedstonerBot '+mubBot.misc.version)
