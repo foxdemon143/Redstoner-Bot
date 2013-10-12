@@ -196,14 +196,14 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-
-                    case "theme":
+                        
+                    case "usercmd":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("You can keep ");
+                            API.sendChat("User Commands - http://goo.gl/zkGJbe");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
+                            API.sendChat(command[1]+" User Commands - http://goo.gl/zkGJbe");
                         }else{
-                            API.sendChat("You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
+                            API.sendChat("User Commands - http://goo.gl/zkGJbe");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -211,13 +211,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                         
-                    case "commands":
+                    case "modcmd":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
+                            API.sendChat("Mods Commands - http://modcommands.blogspot.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Bot Commands - http://goo.gl/zkGJbe");
+                            API.sendChat(command[1]+" Mods Commands - http://modcommands.blogspot.com/");
                         }else{
-                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
+                            API.sendChat("Mods Commands - http://modcommands.blogspot.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
