@@ -210,6 +210,20 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
+                        
+                    case "commands":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" Bot Commands - http://goo.gl/zkGJbe");
+                        }else{
+                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
 
                     case "user":
                         if(typeof command[1] == "undefined"){
