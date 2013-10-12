@@ -757,6 +757,9 @@ botMethods.djAdvanceEvent = function(data){
                     case '5':
                         API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
                         break;
+                    case '6':
+                        API.sendChat('Don\'t play songs that aren\'t in English.')
+                        break;
                     default:
                         API.sendChat('Unknown rule!');
                         break;
@@ -884,27 +887,27 @@ botMethods.djAdvanceEvent = function(data){
         if(mubBot.settings.ruleSkip && typeof ruleSkip[data.media.id] != "undefined"){
             switch(ruleSkip[data.media.id].rule){
                 case '1':
-                    API.sendChat('@'+data.dj.username+' Only Brony/My Little Pony related music and PMV’s can be played in this room');
+                    API.sendChat('@'+data.dj.username+' Dont play troll songs.');
                     botMethods.skip();
                     break;
                 case '2':
-                    API.sendChat('@'+data.dj.username+' All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
+                    API.sendChat('@'+data.dj.username+' No songs that are longer than 5 mins without permission.');
                     botMethods.skip();
                     break;
                 case '3':
-                    API.sendChat('@'+data.dj.username+' Mashups/mixes/loops with little to no effort are subject to being skipped');
+                    API.sendChat('@'+data.dj.username+' Your song was too crappy or had allot of meh\'s... Sorry.');
                     botMethods.skip();
                     break;
-                case '13':
-                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags [NSFW/NSFL])');
+                case '4':
+                    API.sendChat('@'+data.dj.username+' Playing Porn or anything related to porn... We will skip you!');
                     botMethods.skip();
                     break;
-                case '14':
-                    API.sendChat('@'+data.dj.username+' No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
+                case '5':
+                    API.sendChat('@'+data.dj.username+' Skipping you cause You\'re not active on stage!');
                     botMethods.skip();
                     break;
-                case '99':
-                    API.sendChat('@'+data.dj.username+' Just no..');
+                case '6:
+                    API.sendChat('@'+data.dj.username+' Skipped you cause you were playing songs that weren\'t in Enlgish.');
                     botMethods.skip();
                     break;
                 default:
