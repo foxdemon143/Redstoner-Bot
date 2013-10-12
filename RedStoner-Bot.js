@@ -30,7 +30,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.9";
+mubBot.misc.version = "2.0.15";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
