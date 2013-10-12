@@ -180,23 +180,7 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                    case "weird":
-                    case "weirdday":
-                    case "wierd":
-                    case "wierdday":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("Weird Songs - http://playmc.pw/plug/WeirdDay.html");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Weird Songs - http://playmc.pw/plug/WeirdDay.html");
-                        }else{
-                            API.sendChat("Weird Songs - http://playmc.pw/plug/WeirdDay.html");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-                        
+
                     case "usercmd":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("User Commands - http://goo.gl/RS0Iea");
@@ -759,91 +743,19 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[1]){
                     case '1':
-                        API.sendChat('Only English songs and dubstep, can be played in this room');
+                        API.sendChat('Dont play troll songs.');
                         break;
                     case '2':
-                        API.sendChat('All non-English Musics are subject to being skipped if they are just pictures or simple loops');
+                        API.sendChat('No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
                         break;
                     case '3':
-                        API.sendChat('Mashups/mixes/loops with little to no effort are subject to being skipped');
+                        API.sendChat('Dont spam.');
                         break;
                     case '4':
-                        API.sendChat('Any song played that is currently in the history will be skipped');
+                        API.sendChat('Have respect and use common sense.');
                         break;
                     case '5':
                         API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
-                        break;
-                    case '6':
-                        API.sendChat('No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
-                        break;
-                    case '7':
-                        API.sendChat('Spamming in chat will result in kicked');
-                        break;
-                    case '8':
-                        API.sendChat('FOR THE LOVE OF CELESTIA, CONTROL THE CANTERLOCK');
-                        break;
-                    case '9':
-                        API.sendChat('There is a no tolerance policy for fighting');
-                        break;
-                    case '10':
-                        API.sendChat('All visitors to the room must be treated equally and fairly by all');
-                        break;
-                    case '11':
-                        API.sendChat('Do not ask for, bouncer/manager/host positions');
-                        break;
-                    case '12':
-                        API.sendChat('Respect other users and moderators, continuous disrespect will result in being kicked');
-                        break;
-                    case '13':
-                        API.sendChat('No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags.)');
-                        break;
-                    case '14':
-                        API.sendChat('No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
-                        break;
-                    case '15':
-                        API.sendChat('When posting links, please add NSFW for anything suggestive (anything saucy, porn, gore, or clop is NOT allowed). Add Spoiler tags when necessary as well');
-                        break;
-                    case '16':
-                        API.sendChat('Swearing is allowed in moderation. Racist and derogatory slurs can result in being kicked');
-                        break;
-                    case '17':
-                        API.sendChat('Only moderators may ask who mehed or why');
-                        break;
-                    case '18':
-                        API.sendChat('Impersonating other artists, users, etc. can result in being kicked');
-                        break;
-                    case '19':
-                        API.sendChat('If you\'re going to autojoin, be responsive when someone @mentions you, otherwise you risk being kicked');
-                        break;
-                    case '20':
-                        API.sendChat('Using multiple accounts to DJ or enter the booth or waitlist is not allowed');
-                        break;
-                    case '21':
-                        API.sendChat('Don\'t spam emotes, don\'t use overly large emotes, and don\'t use emotes in your name (Referring to ponymotes)');
-                        break;
-                    case '22':
-                        API.sendChat('Do not ask for fans');
-                        break;
-                    case '23':
-                        API.sendChat('Songs such as Nigel, Pingas, etc. are subject to being skipped on any day but Sunday. !weird for full list');
-                        break;
-                    case '24':
-                        API.sendChat('Don\'t RP (roleplay) excessively in plug chat, keep it in Skype instead');
-                        break;
-                    case '25':
-                        API.sendChat('If you have a complaint, do not argue in the chat where everyone can see, instead submit a complaint to the form (http://bit.ly/145oLLW) or take it up with a moderator on Skype. (if you don’t have Skype ask for another form of contact)');
-                        break;
-                    case '26':
-                        API.sendChat('Don’t use excessively long or offensive names');
-                        break;
-                    case '27':
-                        API.sendChat('Have fun and enjoy yourselves!');
-                        break;
-                    case '34':
-                        API.sendChat('hue hue hue');
-                        break;
-                    case '99':
-                        API.sendChat('Just no..');
                         break;
                     default:
                         API.sendChat('Unknown rule!');
