@@ -197,20 +197,6 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "rules":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("Room Rules - http://goo.gl/VzL1h7");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Room Rules - http://goo.gl/VzL1h7");
-                        }else{
-                            API.sendChat("Room Rules - http://goo.gl/VzL1h7");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-
                     case "theme":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("You can keep ");
@@ -218,20 +204,6 @@ botMethods.djAdvanceEvent = function(data){
                             API.sendChat(command[1]+" You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
                         }else{
                             API.sendChat("You can play anything long as it does not contain p**ns or such as Non-English music, Songs will be skipped if you play, 1-D, or JustB.");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-
-                    case "commands":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Bot Commands - http://goo.gl/zkGJbe");
-                        }else{
-                            API.sendChat("Bot Commands - http://goo.gl/zkGJbe");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
