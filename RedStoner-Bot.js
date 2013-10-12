@@ -199,11 +199,11 @@ botMethods.djAdvanceEvent = function(data){
                         
                     case "usercmd":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("User Commands - http://goo.gl/9D8Au4");
+                            API.sendChat("User Commands - http://goo.gl/RS0Iea");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" User Commands - http://goo.gl/9D8Au4");
+                            API.sendChat(command[1]+" User Commands - http://goo.gl/RS0Iea");
                         }else{
-                            API.sendChat("User Commands - http://goo.gl/9D8Au4");
+                            API.sendChat("User Commands - http://goo.gl/RS0Iea");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -213,11 +213,11 @@ botMethods.djAdvanceEvent = function(data){
                         
                     case "modcmd":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Mods Commands - http://goo.gl/rVxkoX");
+                            API.sendChat("Mods Commands - http://goo.gl/bxYfBn");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Mods Commands - http://goo.gl/rVxkoX");
+                            API.sendChat(command[1]+" Mods Commands - http://goo.gl/bxYfBn");
                         }else{
-                            API.sendChat("Mods Commands - http://goo.gl/rVxkoX");
+                            API.sendChat("Mods Commands - http://goo.gl/bxYfBn");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
