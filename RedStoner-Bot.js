@@ -60,7 +60,7 @@ mubBot.settings.removedFilter = true;
 //Redstoner              [DJ-NEON]                  [Redstoner-bot]
 mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
-mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","faggot","queer","dumbass","pussy","dick","cocksucker","asshole","vagina","tit","mangina","tits","cock","jerk","puta","puto"];
+mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","faggot","queer","dumbass","pussy","dick","cocksucker","asshole","vagina","tit","mangina","tits","cock","jerk"];
 
 mubBot.filters.racistWords = ["nigger","kike","spick","porchmonkey","camel jockey","towelhead","towel head","chink","gook","porch monkey"];
 
@@ -180,7 +180,23 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-
+                    case "weird":
+                    case "weirdday":
+                    case "wierd":
+                    case "wierdday":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("Weird Songs - http://playmc.pw/plug/WeirdDay.html");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" Weird Songs - http://playmc.pw/plug/WeirdDay.html");
+                        }else{
+                            API.sendChat("Weird Songs - http://playmc.pw/plug/WeirdDay.html");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
+                        
                     case "usercmd":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("User Commands - http://goo.gl/RS0Iea");
@@ -743,13 +759,13 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[1]){
                     case '1':
-                        API.sendChat('Dont play troll songs.');
+                        API.sendChat('Don\'t Play Troll songs.');
                         break;
                     case '2':
                         API.sendChat('No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
                         break;
                     case '3':
-                        API.sendChat('Dont spam.');
+                        API.sendChat('Don\'t spam.');
                         break;
                     case '4':
                         API.sendChat('Have respect and use common sense.');
@@ -758,7 +774,7 @@ botMethods.djAdvanceEvent = function(data){
                         API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
                         break;
                     case '6':
-                        API.sendChat('Don\'t play songs that aren\'t in English.')
+                        API.sendChat('Any song played that is currently in the history will be skipped.');
                         break;
                     default:
                         API.sendChat('Unknown rule!');
@@ -895,19 +911,15 @@ botMethods.djAdvanceEvent = function(data){
                     botMethods.skip();
                     break;
                 case '3':
-                    API.sendChat('@'+data.dj.username+' Your song was too crappy or had allot of meh\'s... Sorry.');
+                    API.sendChat('@'+data.dj.username+' Song was not in English.');
                     botMethods.skip();
                     break;
                 case '4':
-                    API.sendChat('@'+data.dj.username+' Playing Porn or anything related to porn... We will skip you!');
+                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat.');
                     botMethods.skip();
                     break;
                 case '5':
-                    API.sendChat('@'+data.dj.username+' Skipping you cause You\'re not active on stage!');
-                    botMethods.skip();
-                    break;
-                case '6:
-                    API.sendChat('@'+data.dj.username+' Skipped you cause you were playing songs that weren\'t in Enlgish.');
+                    API.sendChat('@'+data.dj.username+' Just no..');
                     botMethods.skip();
                     break;
                 default:
