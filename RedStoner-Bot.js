@@ -199,11 +199,11 @@ botMethods.djAdvanceEvent = function(data){
                         
                     case "usercommand":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("User Commands - http://goo.gl/RS0Iea");
+                            API.sendChat("User Commands - http://goo.gl/GErBae");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" User Commands - http://goo.gl/RS0Iea");
+                            API.sendChat(command[1]+" User Commands - http://goo.gl/GErBae");
                         }else{
-                            API.sendChat("User Commands - http://goo.gl/RS0Iea");
+                            API.sendChat("User Commands - http://goo.gl/GErBae");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -213,11 +213,11 @@ botMethods.djAdvanceEvent = function(data){
                         
                     case "modcommand":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Mods Commands - http://goo.gl/bxYfBn");
+                            API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Mods Commands - http://goo.gl/bxYfBn");
+                            API.sendChat(command[1]+" Mods Commands - http://goo.gl/P5bfbJ");
                         }else{
-                            API.sendChat("Mods Commands - http://goo.gl/bxYfBn");
+                            API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -227,11 +227,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "user":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("User List - http://goo.gl/oQ9dFN");
+                            API.sendChat("User List - http://rscommands.blogspot.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" User List - http://goo.gl/oQ9dFN");
+                            API.sendChat(command[1]+" User List - http://rscommands.blogspot.com/");
                         }else{
-                            API.sendChat("User List - http://goo.gl/oQ9dFN");
+                            API.sendChat("User List - http://rscommands.blogspot.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
