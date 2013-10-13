@@ -30,7 +30,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.29";
+mubBot.misc.version = "2.0.27";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
@@ -889,13 +889,6 @@ botMethods.djAdvanceEvent = function(data){
             }
             if(msg.indexOf(':yuno:') > -1){
                 API.sendChat('/me : ლ(ಥ益ಥლ');
-                if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                    mubBot.misc.ready = false;
-                    setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                }
-            }
-            if(msg.indexOf(':tableflip:') > -1){
-                API.sendChat('(ノಠ益ಠ)ノ彡┻━┻');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
