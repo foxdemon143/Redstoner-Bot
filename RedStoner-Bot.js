@@ -197,7 +197,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                         
-                    case "usercmd":
+                    case "usercommand":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("User Commands - http://goo.gl/RS0Iea");
                         }else if(command[1].indexOf("@") > -1){
@@ -211,7 +211,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                         
-                    case "modcmd":
+                    case "modcommand":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("Mods Commands - http://goo.gl/bxYfBn");
                         }else if(command[1].indexOf("@") > -1){
