@@ -919,6 +919,14 @@ botMethods.djAdvanceEvent = function(data){
                     botMethods.skip();
                     break;
                 case '5':
+                    API.sendChat('@'+data.dj.username+' Don\'t Play songs that are in history!');
+                    botMethods.skip();
+                    break;
+                case '6':
+                    API.sendChat('@'+data.dj.username+' Playing Videos/season video/Movies, that has no effort are subject to being skipped);
+                    botMethods.skip();
+                    break;
+                case '7':
                     API.sendChat('@'+data.dj.username+' Just no..');
                     botMethods.skip();
                     break;
