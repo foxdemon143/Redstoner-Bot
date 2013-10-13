@@ -923,7 +923,7 @@ botMethods.djAdvanceEvent = function(data){
                     botMethods.skip();
                     break;
                 case '6':
-                    API.sendChat('@'+data.dj.username+' Playing Videos/season video/Movies, that has no effort are subject to being skipped);
+                    API.sendChat('@'+data.dj.username+' Playing Videos/season video/Movies, that has no effort are subject to being skipped');
                     botMethods.skip();
                     break;
                 case '7':
