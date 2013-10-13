@@ -30,7 +30,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.21";
+mubBot.misc.version = "2.0.25";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
@@ -64,7 +64,7 @@ mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","faggot","queer
 
 mubBot.filters.racistWords = ["nigger","kike","spick","porchmonkey","camel jockey","towelhead","towel head","chink","gook","porch monkey"];
 
-mubBot.filters.beggerWords = ["fan4fan","fan me","fan pls","fans please","fan please","fan 4 fan","fan back","give me fans","gimme fans","fan back", "how do i become a", "make me a future dj", "make me a bouncer", "can i be future dj", "can i be a bouncer", "can i be fdj", "make me a fdj"];
+mubBot.filters.beggerWords = ["fan4fan","fan me","fan pls","fans please","fan please","fan 4 fan","fan back","give me fans","gimme fans","fan back", "how do i become a", "make me a feature dj", "make me a bouncer", "can i be feature dj", "can i be a bouncer", "can i be fdj", "make me a fdj", "make me a staff member", "put me as a fdj", "put me as a bouncer", "put me as a staff member",];
 
 mubBot.misc.tacos = ["crispy taco","mexican taco","vegetarian taco","spicy taco","meatlover taco","cheese taco","wet hamburger","taco shell","delicious taco","gross taco"];
 
