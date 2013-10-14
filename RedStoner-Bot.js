@@ -696,7 +696,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                     case "punish":
-                        if(typeof command[1] == "undefined"){
+                        if(typeof command[1].indexof("@") == "undefined"){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomSentence = Math.floor(Math.random() * 3);
