@@ -197,7 +197,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                         
-                    case "usercommand":
+                    case "usercommands":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("User Commands - http://goo.gl/GErBae");
                         }else if(command[1].indexOf("@") > -1){
@@ -211,7 +211,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                         
-                    case "modcommand":
+                    case "modcommands":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
                         }else if(command[1].indexOf("@") > -1){
@@ -225,7 +225,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "user":
+                    case "users":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("User List - http://rscommands.blogspot.com/");
                         }else if(command[1].indexOf("@") > -1){
