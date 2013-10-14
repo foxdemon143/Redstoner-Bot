@@ -595,6 +595,9 @@ $('body').prepend('<script type="text/javascript" id="catfact-js" src="http://pa
 $('body').prepend('<script type="text/javascript" id="ily-js" src="http://pastebin.com/raw.php?i=s4hZ6btE" />');
 $('body').prepend('<script type="text/javascript" id="fortune-js" src="http://pastebin.com/raw.php?i=1jbp0g7A" />');
 $('body').prepend('<script type="text/javascript" id="flipcoin-js" src="http://pastebin.com/raw.php?i=TJUrX3kD" />');
+$('body').prepend('<script type="text/javascript" id="gtg-js" src="http://pastebin.com/raw.php?i=6Rj95Qms" />');
+$('body').prepend('<script type="text/javascript" id="howru-js" src="http://pastebin.com/raw.php?i=SzSd0U2P" />');
+$('body').prepend('<script type="text/javascript" id="hey-js" src="http://pastebin.com/raw.php?i=2LKErRXf" />');
 $('body').prepend('<style type="text/css" id="plug-css">' + "\n" + styles.join("\n") + "\n" + '</style>');
 $('body').append('</div><div id="side-right" class="sidebar">' + '<div class="sidebar-handle"><span>|||</span></div>' + '<div class="sidebar-content"></div>' + '<div id="hr-div"><div><div id="hr-style"></div></div></div>' + '</div><div id="side-left" class="sidebar">' + '<div class="sidebar-handle" title="show/hide userlist"><span>|||</span></div>' + '<div class="sidebar-content2"></div>' + '<div id="hr2-div2"><div><div id="hr2-style2"></div></div></div>' + '</div>');
 $('body').append('<script type="text/javascript" id="plug-js-extra">' + "\n" + scripts.join("\n") + "\n" + '</script>');
