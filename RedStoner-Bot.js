@@ -602,7 +602,7 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[0].toLowerCase()){
                     case "taco":
-                        if(typeof command[1] == "undefined"){
+                        if(typeof command[1].indexOf("@") === 0){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomTaco = Math.floor(Math.random() * mubBot.misc.tacos.length);
@@ -619,6 +619,9 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me throws a " + mubBot.misc.tacos[randomTaco] + " at @" + crowd[randomUser].username + "!");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }else{
@@ -638,6 +641,9 @@ botMethods.djAdvanceEvent = function(data){
                                 case 3:
                                     API.sendChat("/me throws a " + mubBot.misc.tacos[randomTaco] + " at @" + botMethods.cleanString(command[1]) + "!");
                                     break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
+                                    break;
                             }
                         }
                         if(mubBot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
@@ -646,7 +652,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                     case "hug":
-                        if(typeof command[1] == "undefined"){
+                        if(typeof command[1].indexOf("@") === 0){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomSentence = Math.floor(Math.random() * 3);
@@ -665,6 +671,9 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me gives @"+crowd[randomUser].username+" an awkward hug");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }else{
@@ -687,6 +696,9 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" an awkward hug");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }
@@ -722,6 +734,9 @@ botMethods.djAdvanceEvent = function(data){
                                 case 6:
                                     API.sendChat("/me gives @"+crowd[randomUser].username+" a wet willy");
                                     break;
+                                case 7:
+                                    API.sendChat("/me lights @"+crowd[randomUser].username+" hairs on fire");
+                                    break;
                                 default:
                                     API.sendChat('Who the hell is that?');
                                     break;
@@ -750,6 +765,9 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 6:
                                     API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
+                                    break;
+                                case 7:
+                                    API.sendChat("/me lights @"+botMethods.cleanString(command[1])+" hairs on fire");
                                     break;
                                 default:
                                     API.sendChat('Who the hell is that?');
