@@ -695,48 +695,6 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                    case "reward":
-                        if(typeof command[1] == "undefined"){
-                            var crowd = API.getUsers();
-                            var randomUser = Math.floor(Math.random() * crowd.length);
-                            var randomSentence = Math.floor(Math.random() * 3);
-                            switch(randomSentence){
-                                case 0:
-                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a cupcake");
-                                    break;
-                                case 1:
-                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a brownie");
-                                    break;
-                                case 2:
-                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a beer");
-                                    break;
-                                case 3:
-                                    API.sendChat("@"+crowd[randomUser].username+", @"+data.from+" Give you a cookie");
-                                    break;
-                            }
-                        }else{
-                            if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
-                            var randomSentence = Math.floor(Math.random() * 3);
-                            switch(randomSentence){
-                                case 0:
-                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" With a cupcake");
-                                    break;
-                                case 1:
-                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" with a brownie");
-                                    break;
-                                case 2:
-                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" with a beer");
-                                    break;
-                                case 3:
-                                    API.sendChat("/me Rewards @"+botMethods.cleanString(command[1])+" with a cookie");
-                                    break;
-                            }
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
 
                     case "run":
                         if(mubBot.admins.indexOf(fromID) > -1){
