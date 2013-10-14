@@ -696,7 +696,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                     case "punish":
-                        if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1){
+                        if(typeof command[1].indexOf("@") === 0){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomSentence = Math.floor(Math.random() * 3);
