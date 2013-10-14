@@ -776,6 +776,9 @@ botMethods.djAdvanceEvent = function(data){
                     case '6':
                         API.sendChat('Any song played that is currently in the history will be skipped.');
                         break;
+                    case '7':
+                        API.sendChat('Playing Videos/season video/Movies, that has no effort are subject to being skipped.');
+                        break;
                     default:
                         API.sendChat('Unknown rule!');
                         break;
