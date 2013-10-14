@@ -723,7 +723,7 @@ botMethods.djAdvanceEvent = function(data){
                                     API.sendChat("/me gives @"+crowd[randomUser].username+" a wet willy");
                                     break;
                                 default:
-                                    API.sendChat('Need a username, Smart one.');
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }else{
@@ -752,7 +752,7 @@ botMethods.djAdvanceEvent = function(data){
                                     API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
                                     break;
                                 default:
-                                    API.sendChat('Unknown rule!');
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }
