@@ -695,6 +695,66 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
+                    case "punish":
+                        if(typeof command[1] == "undefined"){
+                            var crowd = API.getUsers();
+                            var randomUser = Math.floor(Math.random() * crowd.length);
+                            var randomSentence = Math.floor(Math.random() * 3);
+                            switch(randomSentence){
+                                case 0:
+                                    API.sendChat("/me rubs sandpaper on @"+crowd[randomUser].username+"'s scrotum");
+                                    break;
+                                case 1:
+                                    API.sendChat("/me pokes @"+crowd[randomUser].username+" in the eyes.");
+                                    break;
+                                case 2:
+                                    API.sendChat("/me throws sand in @"+crowd[randomUser].username+"'s eyes");
+                                    break;
+                                case 3:
+                                    API.sendChat("/me makes @"+crowd[randomUser].username+"'s mother cry");
+                                    break;
+                                case 4:
+                                    API.sendChat("/me penetrates @"+crowd[randomUser].username+" with a sharpie");
+                                    break;
+                                case 5:
+                                    API.sendChat("/me pinches @"+crowd[randomUser].username+"'s nipples super hard");
+                                    break;
+                                case 6:
+                                    API.sendChat("/me gives @"+crowd[randomUser].username+" a wet willy");
+                                    break;
+                            }
+                        }else{
+                            if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
+                            var randomSentence = Math.floor(Math.random() * 3);
+                            switch(randomSentence){
+                                case 0:
+                                    API.sendChat("/me rubs sandpaper on @"+botMethods.cleanString(command[1])+"'s scrotum");
+                                    break;
+                                case 1:
+                                    API.sendChat("/me pokes @"+botMethods.cleanString(command[1])+" in the eyes.");
+                                    break;
+                                case 2:
+                                    API.sendChat("/me throws sand in @"+botMethods.cleanString(command[1])+"'s eyes");
+                                    break;
+                                case 3:
+                                    API.sendChat("/me makes @"+botMethods.cleanString(command[1])+"'s mother cry");
+                                    break;
+                                case 4:
+                                    API.sendChat("/me penetrates @"+botMethods.cleanString(command[1])+" with a sharpie");
+                                    break;
+                                case 5:
+                                    API.sendChat("/me pinches @"+botMethods.cleanString(command[1])+"'s nipples super hard");
+                                    break;
+                                case 6:
+                                    API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
+                                    break;
+                            }
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
 
                     case "run":
                         if(mubBot.admins.indexOf(fromID) > -1){
