@@ -722,6 +722,9 @@ botMethods.djAdvanceEvent = function(data){
                                 case 6:
                                     API.sendChat("/me gives @"+crowd[randomUser].username+" a wet willy");
                                     break;
+                                default:
+                        API.sendChat('Need a username, Smart one.');
+                        break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
@@ -748,6 +751,9 @@ botMethods.djAdvanceEvent = function(data){
                                 case 6:
                                     API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
                                     break;
+                                default:
+                        API.sendChat('Need a username, Smart one.');
+                        break;
                             }
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
