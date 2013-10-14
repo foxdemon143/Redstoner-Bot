@@ -787,6 +787,10 @@ botMethods.djAdvanceEvent = function(data){
                     if(typeof command[1] !== 'undefined'){
                         if(typeof ruleSkip[command[1]] !== 'undefined') API.sendChat(command[1]+' is in the ruleskip array!');
                         else API.sendChat(command[1]+' is not in the ruleskip array!');
+                    }else{
+                        if(typeof ruleSkip[API.getMedia().id] !== 'undefined') API.sendChat(API.getMedia().id+' is in the ruleskip array')
+                        else API.sendChat(API.getMedia().id+' is not in the ruleskip array');
+                    }
                     break;
                 case 'ruleskipdelete':
                     if(typeof command[1] !== 'undefined' && typeof ruleSkip[command[1]] !== 'undefined'){
