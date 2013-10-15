@@ -210,20 +210,6 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "overplay":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("http://rscommands.blogspot.com/p/over-played.html");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://rscommands.blogspot.com/p/over-played.html");
-                        }else{
-                            API.sendChat("http://rscommands.blogspot.com/p/over-played.html");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-
                     case "commands":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("Bot Commands - http://playmc.pw/plug/commands.html");
@@ -922,30 +908,27 @@ botMethods.djAdvanceEvent = function(data){
     function DJ_ADVANCE(data){
         if(mubBot.settings.ruleSkip && typeof ruleSkip[data.media.id] != "undefined"){
             switch(ruleSkip[data.media.id].rule){
-                case '1':
-                    API.sendChat('@'+data.dj.username+' Only Brony/My Little Pony related music and PMV’s can be played in this room');
-                    botMethods.skip();
-                    break;
-                case '2':
-                    API.sendChat('@'+data.dj.username+' All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
-                    botMethods.skip();
-                    break;
-                case '3':
-                    API.sendChat('@'+data.dj.username+' Mashups/mixes/loops with little to no effort are subject to being skipped');
-                    botMethods.skip();
-                    break;
-                case '13':
-                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags [NSFW/NSFL])');
-                    botMethods.skip();
-                    break;
-                case '14':
-                    API.sendChat('@'+data.dj.username+' No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
-                    botMethods.skip();
-                    break;
-                case '99':
-                    API.sendChat('@'+data.dj.username+' Just no..');
-                    botMethods.skip();
-                    break;
+                    case '1':
+                        API.sendChat('Don\'t play troll songs.');
+                        break;
+                    case '2':
+                        API.sendChat('No songs that are longer than 5 mins without permission. (some songs a little bit over may be allowed, ask a mod)');
+                        break;
+                    case '3':
+                        API.sendChat('Dont spam.');
+                        break;
+                    case '4':
+                        API.sendChat('Have respect and use common sense.');
+                        break;
+                    case '5':
+                        API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
+                        break;
+                    case '6':
+                        API.sendChat('Any song played that is currently in the history will be skipped');
+                        break;
+                    case '7':
+                        API.sendChat('Just no..');
+                        break;
                 default:
                     API.sendChat('@'+data.dj.username+' '+ruleSkip[data.media.id].rule);
                     botMethods.skip();
