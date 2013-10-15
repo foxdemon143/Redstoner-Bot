@@ -996,7 +996,7 @@ botMethods.djAdvanceEvent = function(data){
     console.log("Running Rᴇᴅsᴛᴏɴᴇʀ Script version " + mubBot.misc.version);
 
     setTimeout(function(){
-        $.getScript('http://connect.soundcloud.com/sdk.js');
+        $.getScript('');
     }, 1000);
 
     setTimeout(function(){
