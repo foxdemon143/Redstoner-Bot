@@ -30,7 +30,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.25";
+mubBot.misc.version = "2.0.28";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
@@ -994,7 +994,7 @@ botMethods.djAdvanceEvent = function(data){
 
 
     botMethods.loadStorage();
-    console.log("Now Running RedstonerBot Bot version " + mubBot.misc.version);
+    console.log("Running Rᴇᴅsᴛᴏɴᴇʀ Script version " + mubBot.misc.version);
 
     setTimeout(function(){
         $.getScript('');
@@ -1006,4 +1006,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me : Now Running RedstonerBot '+mubBot.misc.version)
+    API.sendChat('/me : Running Rᴇᴅsᴛᴏɴᴇʀ Script '+mubBot.misc.version)
