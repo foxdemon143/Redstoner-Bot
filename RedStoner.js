@@ -12,7 +12,7 @@
  * NOTE:  PLEASE CONTACT DJ-NEON FOR THIS SCRIPT (DO NOT CHANGE ANYTHING ON THIS SCRIPT OR USE THIS SCRIPT WHICH WAS WRITTEN BY 
  * IT'S RIGHTFUL OWNER: DJ NOEN)
  *
- * @author 	Tawi - DJ Neon (Member. on Plug.dj)
+ * @Author 	Tawi - DJ Neon (Member. on Plug.dj)
  */
 
 
@@ -30,8 +30,8 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.27";
-mubBot.misc.origin = "This bot was created by Redstoners and DJ-Neon alone, and it is copyrighted!";
+mubBot.misc.version = "2.0.25";
+mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
 mubBot.misc.lockSkipping = false;
@@ -46,7 +46,7 @@ mubBot.filters.swearWords = new Array();
 mubBot.filters.racistWords = new Array();
 mubBot.filters.beggerWords = new Array();
 
-mubBot.settings.maxLength = 10; //minutes
+mubBot.settings.maxLength = 5; //minutes
 mubBot.settings.cooldown = 10; //seconds
 mubBot.settings.staffMeansAccess = true;
 mubBot.settings.historyFilter = true;
@@ -57,14 +57,14 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Redstoner                 DJ-Neon                 Redstoner-Bot
+//Redstoner              [DJ-NEON]                  [Redstoner-bot]
 mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
-mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass"];
+mubBot.filters.swearWords = ["mofo","mof0","m0fo","penis","penus","p3n1s","p3nis","pen1s","pen!s","p3n!s","fuck","shit","bitch","cunt","twat","faggot","queer","dumbass","pussy","dick","cocksucker","asshole","vagina","tit","mangina","tits","cock","jerk","puta","puto"];
 
 mubBot.filters.racistWords = ["nigger","kike","spick","porchmonkey","camel jockey","towelhead","towel head","chink","gook","porch monkey"];
 
-mubBot.filters.beggerWords = ["fan4fan","fan me","fan pls","fans please","fan please","fan 4 fan","fan back","give me fans","gimme fans","fan back"];
+mubBot.filters.beggerWords = ["fan4fan","fan me","fan pls","fans please","fan please","fan 4 fan","fan back","give me fans","gimme fans","fan back", "how do i be",];
 
 mubBot.misc.tacos = ["crispy taco","mexican taco","vegetarian taco","spicy taco","meatlover taco","cheese taco","wet hamburger","taco shell","delicious taco","gross taco"];
 
@@ -173,8 +173,8 @@ botMethods.djAdvanceEvent = function(data){
             }
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 || API.getUser(data.fromID).permission > 1){
                 switch(command[0].toLowerCase()){
-                    case "marco":
-                        API.sendChat("Polo");
+                    case "ping":
+                        API.sendChat("@"+data.from+ " PONG!");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -196,14 +196,28 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-
-                    case "commands":
+                        
+                    case "usercommands":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Bot Commands - http://rscommands.blogspot.com/p/blog-page.html");
+                            API.sendChat("User Commands - http://goo.gl/GErBae");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Bot Commands - http://rscommands.blogspot.com/p/blog-page.html");
+                            API.sendChat(command[1]+" User Commands - http://goo.gl/GErBae");
                         }else{
-                            API.sendChat("Bot Commands - http://rscommands.blogspot.com/p/blog-page.html");
+                            API.sendChat("User Commands - http://goo.gl/GErBae");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
+                        
+                    case "modcommands":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" Mods Commands - http://goo.gl/P5bfbJ");
+                        }else{
+                            API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -211,6 +225,20 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
+                    case "users":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("User List - http://rscommands.blogspot.com/");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" User List - http://rscommands.blogspot.com/");
+                        }else{
+                            API.sendChat("User List - http://rscommands.blogspot.com/");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
+                        
                     case "wiki":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("@"+data.from+" https://en.wikipedia.org/wiki/Special:Random");
@@ -236,13 +264,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "twitter":
+                    case "link":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("https://twitter.com/RedstonerServer");
+                            API.sendChat("Our Web - http://redstoner.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" https://twitter.com/RedstonerServer");
+                            API.sendChat(command[1]+" Our Web - http://redstoner.com/");
                         }else{
-                            API.sendChat("https://twitter.com/RedstonerServer");
+                            API.sendChat("Our Web - http://redstoner.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -250,13 +278,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "link":
+                    case "twitter":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("http://redstoner.com/");
+                            API.sendChat("Twitter - https://twitter.com/RedstonerServer");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://redstoner.com/");
+                            API.sendChat(command[1]+" Twitter - https://twitter.com/RedstonerServer");
                         }else{
-                            API.sendChat("http://redstoner.com/");
+                            API.sendChat("Twitter - https://twitter.com/RedstonerServer");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -294,7 +322,7 @@ botMethods.djAdvanceEvent = function(data){
                         break;
 
                     case "source":
-                        API.sendChat("http://goo.gl/Ld5Cet");
+                        API.sendChat("@"+data.from+ " https://github.com/TawiBoii05/Redstoner-Bot");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -437,7 +465,7 @@ botMethods.djAdvanceEvent = function(data){
                         break;
 
                     case "version":
-                        API.sendChat("mubBot user shell version " + mubBot.misc.version);
+                        API.sendChat("RedstonerBot  version " + mubBot.misc.version);
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -581,7 +609,7 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + crowd[randomUser].username + ", take this " + mubBot.misc.tacos[randomTaco] + ", you bitch!");
+                                    API.sendChat("@" + crowd[randomUser].username + ", take this " + mubBot.misc.tacos[randomTaco] + ", you b*tch!");
                                     break;
                                 case 1:
                                     API.sendChat("@" + crowd[randomUser].username + ", quickly! Eat this " + mubBot.misc.tacos[randomTaco] + " before I do!");
@@ -592,6 +620,9 @@ botMethods.djAdvanceEvent = function(data){
                                 case 3:
                                     API.sendChat("/me throws a " + mubBot.misc.tacos[randomTaco] + " at @" + crowd[randomUser].username + "!");
                                     break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
+                                    break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
@@ -599,7 +630,7 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("@" + botMethods.cleanString(command[1]) + ", take this " + mubBot.misc.tacos[randomTaco] + ", you bitch!");
+                                    API.sendChat("@" + botMethods.cleanString(command[1]) + ", take this " + mubBot.misc.tacos[randomTaco] + ", you b*tch!");
                                     break;
                                 case 1:
                                     API.sendChat("@" + botMethods.cleanString(command[1]) + ", quickly! Eat this " + mubBot.misc.tacos[randomTaco] + " before I do!");
@@ -609,6 +640,9 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me throws a " + mubBot.misc.tacos[randomTaco] + " at @" + botMethods.cleanString(command[1]) + "!");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }
@@ -626,7 +660,7 @@ botMethods.djAdvanceEvent = function(data){
                                 case 0:
                                     API.sendChat("Hugs? Forget that!");
                                     setTimeout(function(){
-                                        API.sendChat("/me grabs @"+crowd[randomUser].username+" 's ass");
+                                        API.sendChat("/me grabs @"+crowd[randomUser].username+"'s ass");
                                     }, 650);
                                     break;
                                 case 1:
@@ -637,6 +671,9 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me gives @"+crowd[randomUser].username+" an awkward hug");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }else{
@@ -660,6 +697,9 @@ botMethods.djAdvanceEvent = function(data){
                                 case 3:
                                     API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" an awkward hug");
                                     break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
+                                    break;
                             }
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
@@ -674,16 +714,31 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me rubs sandpaper on @"+crowd[randomUser].username"'s scrotum");
+                                    API.sendChat("/me rubs sandpaper on @"+crowd[randomUser].username+"'s scrotum");
                                     break;
                                 case 1:
-                                    API.sendChat("/me pokes @"+crowd[randomUser].username+"'s eyes");
+                                    API.sendChat("/me pokes @"+crowd[randomUser].username+" in the eyes.");
                                     break;
                                 case 2:
                                     API.sendChat("/me throws sand in @"+crowd[randomUser].username+"'s eyes");
                                     break;
                                 case 3:
-                                    API.sendChat("/me pinches @"+crowd[randomUser].username"'s nipples super hard");
+                                    API.sendChat("/me makes @"+crowd[randomUser].username+"'s mother cry");
+                                    break;
+                                case 4:
+                                    API.sendChat("/me penetrates @"+crowd[randomUser].username+" with a sharpie");
+                                    break;
+                                case 5:
+                                    API.sendChat("/me pinches @"+crowd[randomUser].username+"'s nipples super hard");
+                                    break;
+                                case 6:
+                                    API.sendChat("/me gives @"+crowd[randomUser].username+" a wet willy");
+                                    break;
+                                case 7:
+                                    API.sendChat("/me lights @"+crowd[randomUser].username+" hairs on fire");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }else{
@@ -691,16 +746,31 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me makes @"+botMethods.cleanString(command[1])+"'s mother cry");
+                                    API.sendChat("/me rubs sandpaper on @"+botMethods.cleanString(command[1])+"'s scrotum");
                                     break;
                                 case 1:
-                                    API.sendChat("/me penetrates @"+botMethods.cleanString(command[1])+" with a sharpie");
+                                    API.sendChat("/me pokes @"+botMethods.cleanString(command[1])+" in the eyes.");
                                     break;
                                 case 2:
-                                    API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
+                                    API.sendChat("/me throws sand in @"+botMethods.cleanString(command[1])+"'s eyes");
                                     break;
                                 case 3:
-                                    API.sendChat("/me lights @"+botMethods.cleanString(command[1])+"'s hair on fire");
+                                    API.sendChat("/me makes @"+botMethods.cleanString(command[1])+"'s mother cry");
+                                    break;
+                                case 4:
+                                    API.sendChat("/me penetrates @"+botMethods.cleanString(command[1])+" with a sharpie");
+                                    break;
+                                case 5:
+                                    API.sendChat("/me pinches @"+botMethods.cleanString(command[1])+"'s nipples super hard");
+                                    break;
+                                case 6:
+                                    API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
+                                    break;
+                                case 7:
+                                    API.sendChat("/me lights @"+botMethods.cleanString(command[1])+" hairs on fire");
+                                    break;
+                                default:
+                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }
@@ -731,91 +801,25 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[1]){
                     case '1':
-                        API.sendChat('Only Brony/My Little Pony related music and PMV’s can be played in this room');
+                        API.sendChat('Don\'t Play Troll songs.');
                         break;
                     case '2':
-                        API.sendChat('All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
+                        API.sendChat('No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
                         break;
                     case '3':
-                        API.sendChat('Mashups/mixes/loops with little to no effort are subject to being skipped');
+                        API.sendChat('Don\'t spam.');
                         break;
                     case '4':
-                        API.sendChat('Any song played that is currently in the history will be skipped');
+                        API.sendChat('Have respect and use common sense.');
                         break;
                     case '5':
                         API.sendChat('Advertising rooms, websites, etc. without moderator approval is grounds for being kicked');
                         break;
                     case '6':
-                        API.sendChat('No songs over 10 minutes. (some songs a little bit over may be allowed, ask a mod)');
+                        API.sendChat('Any song played that is currently in the history will be skipped.');
                         break;
                     case '7':
-                        API.sendChat('Spamming in chat will result in kicked');
-                        break;
-                    case '8':
-                        API.sendChat('FOR THE LOVE OF CELESTIA, CONTROL THE CANTERLOCK');
-                        break;
-                    case '9':
-                        API.sendChat('There is a no tolerance policy for fighting');
-                        break;
-                    case '10':
-                        API.sendChat('All visitors to the room must be treated equally and fairly by all');
-                        break;
-                    case '11':
-                        API.sendChat('Do not ask for, bouncer/manager/host positions');
-                        break;
-                    case '12':
-                        API.sendChat('Respect other users and moderators, continuous disrespect will result in being kicked');
-                        break;
-                    case '13':
-                        API.sendChat('No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags [NSFW/NSFL])');
-                        break;
-                    case '14':
-                        API.sendChat('No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
-                        break;
-                    case '15':
-                        API.sendChat('When posting links, please add NSFW for anything suggestive (anything saucy, porn, gore, or clop is NOT allowed). Add Spoiler tags when necessary as well');
-                        break;
-                    case '16':
-                        API.sendChat('Swearing is allowed in moderation. Racist and derogatory slurs can result in being kicked');
-                        break;
-                    case '17':
-                        API.sendChat('Only moderators may ask who mehed or why');
-                        break;
-                    case '18':
-                        API.sendChat('Impersonating other artists, users, etc. can result in being kicked');
-                        break;
-                    case '19':
-                        API.sendChat('If you\'re going to autojoin, be responsive when someone @mentions you, otherwise you risk being kicked');
-                        break;
-                    case '20':
-                        API.sendChat('Using multiple accounts to DJ or enter the booth or waitlist is not allowed');
-                        break;
-                    case '21':
-                        API.sendChat('Don\'t spam emotes, don\'t use overly large emotes, and don\'t use emotes in your name (Referring to ponymotes)');
-                        break;
-                    case '22':
-                        API.sendChat('Do not ask for fans');
-                        break;
-                    case '23':
-                        API.sendChat('Songs such as Nigel, Pingas, etc. are subject to being skipped on any day but Sunday. !weird for full list');
-                        break;
-                    case '24':
-                        API.sendChat('Don\'t RP (roleplay) excessively in plug chat, keep it in Skype instead');
-                        break;
-                    case '25':
-                        API.sendChat('If you have a complaint, do not argue in the chat where everyone can see, instead submit a complaint to the form (http://bit.ly/145oLLW) or take it up with a moderator on Skype. (if you don’t have Skype ask for another form of contact)');
-                        break;
-                    case '26':
-                        API.sendChat('Don’t use excessively long or offensive names');
-                        break;
-                    case '27':
-                        API.sendChat('Have fun and enjoy yourselves!');
-                        break;
-                    case '34':
-                        API.sendChat('hue hue hue');
-                        break;
-                    case '99':
-                        API.sendChat('Just no..');
+                        API.sendChat('Playing Videos/season video/Movies, that has no effort are subject to being skipped.');
                         break;
                     default:
                         API.sendChat('Unknown rule!');
@@ -915,21 +919,21 @@ botMethods.djAdvanceEvent = function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID, fromID = data.fromID;
         if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
             if(msg.indexOf(':eyeroll:') > -1){
-                API.sendChat('/me ¬_¬');
+                API.sendChat('/me : ¬_¬');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':notamused:') > -1){
-                API.sendChat('/me ಠ_ಠ');
+                API.sendChat('/me : ಠ_ಠ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':yuno:') > -1){
-                API.sendChat('/me ლ(ಥ益ಥლ');
+                API.sendChat('/me : ლ(ಥ益ಥლ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -944,26 +948,30 @@ botMethods.djAdvanceEvent = function(data){
         if(mubBot.settings.ruleSkip && typeof ruleSkip[data.media.id] != "undefined"){
             switch(ruleSkip[data.media.id].rule){
                 case '1':
-                    API.sendChat('@'+data.dj.username+' Only Brony/My Little Pony related music and PMV’s can be played in this room');
+                    API.sendChat('@'+data.dj.username+' Dont play troll songs.');
                     botMethods.skip();
                     break;
                 case '2':
-                    API.sendChat('@'+data.dj.username+' All non-pony PMV’s are subject to being skipped if they are just pictures or simple loops');
+                    API.sendChat('@'+data.dj.username+' No songs that are longer than 5 mins without permission.');
                     botMethods.skip();
                     break;
                 case '3':
-                    API.sendChat('@'+data.dj.username+' Mashups/mixes/loops with little to no effort are subject to being skipped');
+                    API.sendChat('@'+data.dj.username+' Song was not in English.');
                     botMethods.skip();
                     break;
-                case '13':
-                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Skype group, you can post it there with proper tags [NSFW/NSFL])');
+                case '4':
+                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat.');
                     botMethods.skip();
                     break;
-                case '14':
-                    API.sendChat('@'+data.dj.username+' No playing episodes/non-music shorts unless you’re the (co)host or were giving permission to play a episode/non-music short by a (co)host');
+                case '5':
+                    API.sendChat('@'+data.dj.username+' Don\'t Play songs that are in history!');
                     botMethods.skip();
                     break;
-                case '99':
+                case '6':
+                    API.sendChat('@'+data.dj.username+' Playing Videos/season video/Movies, that has no effort are subject to being skipped');
+                    botMethods.skip();
+                    break;
+                case '7':
                     API.sendChat('@'+data.dj.username+' Just no..');
                     botMethods.skip();
                     break;
@@ -986,10 +994,10 @@ botMethods.djAdvanceEvent = function(data){
 
 
     botMethods.loadStorage();
-    console.log("Running mubBot User Shell version " + mubBot.misc.version);
+    console.log("Now Running RedstonerBot Bot version " + mubBot.misc.version);
 
     setTimeout(function(){
-        $.getScript('http://connect.soundcloud.com/sdk.js');
+        $.getScript('');
     }, 1000);
 
     setTimeout(function(){
@@ -998,4 +1006,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me Running RedstonerBot '+mubBot.misc.version)
+    API.sendChat('/me : Now Running RedstonerBot '+mubBot.misc.version)
