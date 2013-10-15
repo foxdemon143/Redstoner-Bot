@@ -965,7 +965,7 @@ botMethods.djAdvanceEvent = function(data){
 
 
     botMethods.loadStorage();
-    console.log(" Running Rᴇᴅsᴛᴏɴᴇʀ Script version " + mubBot.misc.version);
+    console.log(" Running Redstoner Script version " + mubBot.misc.version);
 
     setTimeout(function(){
         $.getScript('http://connect.soundcloud.com/sdk.js');
@@ -977,4 +977,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me Running Rᴇᴅsᴛᴏɴᴇʀ Script '+mubBot.misc.version)
+    API.sendChat('/me Running Redstoner Script '+mubBot.misc.version)
