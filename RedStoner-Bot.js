@@ -15,7 +15,6 @@
  * @Author 	Tawi - DJ Neon (Member. on Plug.dj)
  */
 
-
 var mubBot = {};
 var ruleSkip = {};
 mubBot.misc = {};
@@ -30,7 +29,7 @@ toSave.settings = mubBot.settings;
 toSave.moderators = mubBot.moderators;
 toSave.ruleSkip = ruleSkip;
 
-mubBot.misc.version = "2.0.25";
+mubBot.misc.version = "2.0.27";
 mubBot.misc.origin = "This bot was created by Redstoner and DJ-Neon alone, and it is copyrighted!";
 mubBot.misc.changelog = "Added a secondary check for history";
 mubBot.misc.ready = true;
@@ -46,7 +45,7 @@ mubBot.filters.swearWords = new Array();
 mubBot.filters.racistWords = new Array();
 mubBot.filters.beggerWords = new Array();
 
-mubBot.settings.maxLength = 5; //minutes
+mubBot.settings.maxLength = 10; //minutes
 mubBot.settings.cooldown = 10; //seconds
 mubBot.settings.staffMeansAccess = true;
 mubBot.settings.historyFilter = true;
@@ -57,14 +56,14 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Redstoner              [DJ-NEON]                  [Redstoner-bot]
+//RedStoner               [DJ-NEON]                  [Redstoner-bot]
 mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
 mubBot.filters.swearWords = ["mofo","mof0","m0fo","penis","penus","p3n1s","p3nis","pen1s","pen!s","p3n!s","fuck","shit","bitch","cunt","twat","faggot","queer","dumbass","pussy","dick","cocksucker","asshole","vagina","tit","mangina","tits","cock","jerk","puta","puto"];
 
 mubBot.filters.racistWords = ["nigger","kike","spick","porchmonkey","camel jockey","towelhead","towel head","chink","gook","porch monkey"];
 
-mubBot.filters.beggerWords = ["fan4fan","fan me","fan pls","fans please","fan please","fan 4 fan","fan back","give me fans","gimme fans","fan back", "how do i be",];
+mubBot.filters.beggerWords = ["fan4fan","fan me","fan pls","fans please","fan please","fan 4 fan","fan back","give me fans","gimme fans","fan back"];
 
 mubBot.misc.tacos = ["crispy taco","mexican taco","vegetarian taco","spicy taco","meatlover taco","cheese taco","wet hamburger","taco shell","delicious taco","gross taco"];
 
@@ -196,14 +195,42 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                        
+
+                    case "rules":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("Room Rules - http://goo.gl/GBl4e");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" Room Rules - http://goo.gl/GBl4e");
+                        }else{
+                            API.sendChat("Room Rules - http://goo.gl/GBl4e");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
+
+                    case "theme":
+                        if(typeof command[1] == "undefined"){
+                            API.sendChat("In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
+                        }else if(command[1].indexOf("@") > -1){
+                            API.sendChat(command[1]+" In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
+                        }else{
+                            API.sendChat("In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
+                        }
+                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
+                            mubBot.misc.ready = false;
+                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
+                        }
+                        break;
+
                     case "usercommands":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("User Commands - http://goo.gl/GErBae");
+                            API.sendChat("User Commands: http://goo.gl/GErBae");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" User Commands - http://goo.gl/GErBae");
+                            API.sendChat(command[1]+" User Commands: http://goo.gl/GErBae");
                         }else{
-                            API.sendChat("User Commands - http://goo.gl/GErBae");
+                            API.sendChat("User Commands: http://goo.gl/GErBae");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -213,11 +240,11 @@ botMethods.djAdvanceEvent = function(data){
                         
                     case "modcommands":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
+                            API.sendChat("Mods Commands: http://goo.gl/P5bfbJ");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Mods Commands - http://goo.gl/P5bfbJ");
+                            API.sendChat(command[1]+" Mods Commands: http://goo.gl/P5bfbJ");
                         }else{
-                            API.sendChat("Mods Commands - http://goo.gl/P5bfbJ");
+                            API.sendChat("Mods Commands: http://goo.gl/P5bfbJ");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -225,20 +252,6 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "users":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("User List - http://rscommands.blogspot.com/");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" User List - http://rscommands.blogspot.com/");
-                        }else{
-                            API.sendChat("User List - http://rscommands.blogspot.com/");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-                        
                     case "wiki":
                         if(typeof command[1] == "undefined"){
                             API.sendChat("@"+data.from+" https://en.wikipedia.org/wiki/Special:Random");
@@ -266,11 +279,11 @@ botMethods.djAdvanceEvent = function(data){
 
                     case "link":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Our Web - http://redstoner.com/");
+                            API.sendChat("our Website: http://redstoner.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Our Web - http://redstoner.com/");
+                            API.sendChat(command[1]+" our Website: http://redstoner.com/");
                         }else{
-                            API.sendChat("Our Web - http://redstoner.com/");
+                            API.sendChat("our Website: http://redstoner.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -328,7 +341,6 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-
                 }
             }
         }
@@ -465,14 +477,14 @@ botMethods.djAdvanceEvent = function(data){
                         break;
 
                     case "version":
-                        API.sendChat("RedstonerBot  version " + mubBot.misc.version);
+                        API.sendChat("Redstoner Script version " + mubBot.misc.version);
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
 
-                    case "origin":
+                    case "owner":
                     case "author":
                     case "authors":
                     case "creator":
@@ -620,9 +632,6 @@ botMethods.djAdvanceEvent = function(data){
                                 case 3:
                                     API.sendChat("/me throws a " + mubBot.misc.tacos[randomTaco] + " at @" + crowd[randomUser].username + "!");
                                     break;
-                                default:
-                                    API.sendChat('Who the hell is that?');
-                                    break;
                             }
                         }else{
                             if(command[1].indexOf("@") === 0) command[1] = command[1].substring(1);
@@ -641,9 +650,6 @@ botMethods.djAdvanceEvent = function(data){
                                 case 3:
                                     API.sendChat("/me throws a " + mubBot.misc.tacos[randomTaco] + " at @" + botMethods.cleanString(command[1]) + "!");
                                     break;
-                                default:
-                                    API.sendChat('Who the hell is that?');
-                                    break;
                             }
                         }
                         if(mubBot.admins.indexOf(fromID) > -1 || API.getUser(fromID).permission < 2){
@@ -660,7 +666,7 @@ botMethods.djAdvanceEvent = function(data){
                                 case 0:
                                     API.sendChat("Hugs? Forget that!");
                                     setTimeout(function(){
-                                        API.sendChat("/me grabs @"+crowd[randomUser].username+"'s ass");
+                                        API.sendChat("/me grabs @"+crowd[randomUser].username+" 's ass");
                                     }, 650);
                                     break;
                                 case 1:
@@ -671,9 +677,6 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me gives @"+crowd[randomUser].username+" an awkward hug");
-                                    break;
-                                default:
-                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }else{
@@ -696,9 +699,6 @@ botMethods.djAdvanceEvent = function(data){
                                     break;
                                 case 3:
                                     API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" an awkward hug");
-                                    break;
-                                default:
-                                    API.sendChat('Who the hell is that?');
                                     break;
                             }
                         }
@@ -821,6 +821,9 @@ botMethods.djAdvanceEvent = function(data){
                     case '7':
                         API.sendChat('Playing Videos/season video/Movies, that has no effort are subject to being skipped.');
                         break;
+                    case '99':
+                        API.sendChat('Just no..');
+                        break;
                     default:
                         API.sendChat('Unknown rule!');
                         break;
@@ -919,21 +922,21 @@ botMethods.djAdvanceEvent = function(data){
         msg = data.message.toLowerCase(), chatID = data.chatID, fromID = data.fromID;
         if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
             if(msg.indexOf(':eyeroll:') > -1){
-                API.sendChat('/me : ¬_¬');
+                API.sendChat('/me ¬_¬');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':notamused:') > -1){
-                API.sendChat('/me : ಠ_ಠ');
+                API.sendChat('/me ಠ_ಠ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                 }
             }
             if(msg.indexOf(':yuno:') > -1){
-                API.sendChat('/me : ლ(ಥ益ಥლ');
+                API.sendChat('/me ლ(ಥ益ಥლ');
                 if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                     mubBot.misc.ready = false;
                     setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -948,30 +951,26 @@ botMethods.djAdvanceEvent = function(data){
         if(mubBot.settings.ruleSkip && typeof ruleSkip[data.media.id] != "undefined"){
             switch(ruleSkip[data.media.id].rule){
                 case '1':
-                    API.sendChat('@'+data.dj.username+' Dont play troll songs.');
+                    API.sendChat('@'+data.dj.username+' Don\'t play troll Songs.);
                     botMethods.skip();
                     break;
                 case '2':
-                    API.sendChat('@'+data.dj.username+' No songs that are longer than 5 mins without permission.');
+                    API.sendChat('@'+data.dj.username+' No songs over 5 minutes. (some songs a little bit over may be allowed, ask a mod)');
                     botMethods.skip();
                     break;
                 case '3':
-                    API.sendChat('@'+data.dj.username+' Song was not in English.');
+                    API.sendChat('@'+data.dj.username+' Any song played that is currently in the history will be skipped.');
                     botMethods.skip();
                     break;
-                case '4':
-                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat.');
+                case '13':
+                    API.sendChat('@'+data.dj.username+' No R34/clop/porn/gore. This includes links, songs, and chat. (If you want to post this stuff anywhere, talk to a moderator about being added to the Twitter page.)');
                     botMethods.skip();
                     break;
-                case '5':
-                    API.sendChat('@'+data.dj.username+' Don\'t Play songs that are in history!');
+                case '14':
+                    API.sendChat('@'+data.dj.username+' No playing episodes/non-music unless you’re the Manager or were giving permission to play a episode/non-music by a Manager');
                     botMethods.skip();
                     break;
-                case '6':
-                    API.sendChat('@'+data.dj.username+' Playing Videos/season video/Movies, that has no effort are subject to being skipped');
-                    botMethods.skip();
-                    break;
-                case '7':
+                case '99':
                     API.sendChat('@'+data.dj.username+' Just no..');
                     botMethods.skip();
                     break;
@@ -994,10 +993,10 @@ botMethods.djAdvanceEvent = function(data){
 
 
     botMethods.loadStorage();
-    console.log("Now Running RedstonerBot Bot version " + mubBot.misc.version);
+    console.log("Running Rᴇᴅsᴛᴏɴᴇʀ Script version " + mubBot.misc.version);
 
     setTimeout(function(){
-        $.getScript('');
+        $.getScript('http://connect.soundcloud.com/sdk.js');
     }, 1000);
 
     setTimeout(function(){
@@ -1006,4 +1005,4 @@ botMethods.djAdvanceEvent = function(data){
         });
     }, 3000);
 
-    API.sendChat('/me : Now Running RedstonerBot '+mubBot.misc.version)
+    API.sendChat('/me : Running Rᴇᴅsᴛᴏɴᴇʀ Script '+mubBot.misc.version)
