@@ -57,8 +57,8 @@ mubBot.settings.interactive = true;
 mubBot.settings.ruleSkip = true;
 mubBot.settings.removedFilter = true;
 
-//Emub                      DerpTheBass                 [#808]                          eBot
-mubBot.admins = ["50aeaf683e083e18fa2d187e", "50aeb07e96fba52c3ca04ca8", "50aeb607c3b97a2cb4c35ac1", "51264d96d6e4a966883b0702"];
+//Redstoner                 DJ-Neon                 Redstoner-Bot
+mubBot.admins = ["50aeaeb6c3b97a2cb4c25bd2", "524b568f3e083e4f2be7356e"];
 
 mubBot.filters.swearWords = ["fuck","shit","bitch","cunt","twat","fag","queer","dumbass"];
 
@@ -197,41 +197,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "rules":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("Room Rules - http://goo.gl/GBl4e");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Room Rules - http://goo.gl/GBl4e");
-                        }else{
-                            API.sendChat("Room Rules - http://goo.gl/GBl4e");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-
-                    case "theme":
-                        if(typeof command[1] == "undefined"){
-                            API.sendChat("In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
-                        }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
-                        }else{
-                            API.sendChat("In this room, only music related to My Little Pony: Friendship is Magic is allowed. This includes PMVs.");
-                        }
-                        if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
-                            mubBot.misc.ready = false;
-                            setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
-                        }
-                        break;
-
                     case "commands":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("Bot Commands - http://playmc.pw/plug/commands.html");
+                            API.sendChat("Bot Commands - http://rscommands.blogspot.com/p/blog-page.html");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" Bot Commands - http://playmc.pw/plug/commands.html");
+                            API.sendChat(command[1]+" Bot Commands - http://rscommands.blogspot.com/p/blog-page.html");
                         }else{
-                            API.sendChat("Bot Commands - http://playmc.pw/plug/commands.html");
+                            API.sendChat("Bot Commands - http://rscommands.blogspot.com/p/blog-page.html");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -264,13 +236,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "steam":
+                    case "twitter":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("http://steamcommunity.com/groups/plugfim#");
+                            API.sendChat("https://twitter.com/RedstonerServer");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://steamcommunity.com/groups/plugfim#");
+                            API.sendChat(command[1]+" https://twitter.com/RedstonerServer");
                         }else{
-                            API.sendChat("http://steamcommunity.com/groups/plugfim#");
+                            API.sendChat("https://twitter.com/RedstonerServer");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -278,13 +250,13 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "skype":
+                    case "link":
                         if(typeof command[1] == "undefined"){
-                            API.sendChat("http://goo.gl/NjSO6j");
+                            API.sendChat("http://redstoner.com/");
                         }else if(command[1].indexOf("@") > -1){
-                            API.sendChat(command[1]+" http://goo.gl/NjSO6j");
+                            API.sendChat(command[1]+" http://redstoner.com/");
                         }else{
-                            API.sendChat("http://goo.gl/NjSO6j");
+                            API.sendChat("http://redstoner.com/");
                         }
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
@@ -321,8 +293,8 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
 
-                    case "mubplug":
-                        API.sendChat("http://pastebin.com/GwwFEAhX");
+                    case "source":
+                        API.sendChat("http://goo.gl/Ld5Cet");
                         if(mubBot.admins.indexOf(fromID) == -1 || API.getUser(fromID).permission < 2){
                             mubBot.misc.ready = false;
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
@@ -602,7 +574,7 @@ botMethods.djAdvanceEvent = function(data){
             if(mubBot.misc.ready || mubBot.admins.indexOf(fromID) > -1 ||API.getUser(fromID).permission > 1){
                 switch(command[0].toLowerCase()){
                     case "taco":
-                        if(typeof command[1] == "undefined"){
+                        if(typeof command[1].indexOf("@") === 0){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomTaco = Math.floor(Math.random() * mubBot.misc.tacos.length);
@@ -646,7 +618,7 @@ botMethods.djAdvanceEvent = function(data){
                         }
                         break;
                     case "hug":
-                        if(typeof command[1] == "undefined"){
+                        if(typeof command[1].indexOf("@") === 0){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomSentence = Math.floor(Math.random() * 3);
@@ -695,23 +667,23 @@ botMethods.djAdvanceEvent = function(data){
                             setTimeout(function(){ mubBot.misc.ready = true; }, mubBot.settings.cooldown * 1000);
                         }
                         break;
-                    case "cookie":
-                        if(typeof command[1] == "undefined"){
+                    case "punish":
+                        if(typeof command[1].indexOf("@") === 0){
                             var crowd = API.getUsers();
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me throws a STICK OF DYNAMITE at @"+crowd[randomUser].username);
+                                    API.sendChat("/me rubs sandpaper on @"+crowd[randomUser].username"'s scrotum");
                                     break;
                                 case 1:
-                                    API.sendChat("/me drowns @"+crowd[randomUser].username+" in batter");
+                                    API.sendChat("/me pokes @"+crowd[randomUser].username+"'s eyes");
                                     break;
                                 case 2:
-                                    API.sendChat("/me shows @"+crowd[randomUser].username+" the power of friendship. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me throws sand in @"+crowd[randomUser].username+"'s eyes");
                                     break;
                                 case 3:
-                                    API.sendChat("/me hands an anthrax laced cookie to @"+crowd[randomUser].username);
+                                    API.sendChat("/me pinches @"+crowd[randomUser].username"'s nipples super hard");
                                     break;
                             }
                         }else{
@@ -719,16 +691,16 @@ botMethods.djAdvanceEvent = function(data){
                             var randomSentence = Math.floor(Math.random() * 3);
                             switch(randomSentence){
                                 case 0:
-                                    API.sendChat("/me throws a STICK OF DYNAMITE at @"+botMethods.cleanString(command[1]));
+                                    API.sendChat("/me makes @"+botMethods.cleanString(command[1])+"'s mother cry");
                                     break;
                                 case 1:
-                                    API.sendChat("/me drowns @"+botMethods.cleanString(command[1])+" in batter");
+                                    API.sendChat("/me penetrates @"+botMethods.cleanString(command[1])+" with a sharpie");
                                     break;
                                 case 2:
-                                    API.sendChat("/me hands an anthrax laced cookie to @"+botMethods.cleanString(command[1]));
+                                    API.sendChat("/me gives @"+botMethods.cleanString(command[1])+" a wet willy");
                                     break;
                                 case 3:
-                                    API.sendChat("/me shows @"+botMethods.cleanString(command[1])+" the power of friendship. BY SLAPPING THEM WITH A COOKIE");
+                                    API.sendChat("/me lights @"+botMethods.cleanString(command[1])+"'s hair on fire");
                                     break;
                             }
                         }
